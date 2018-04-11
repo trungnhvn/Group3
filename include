@@ -1,0 +1,6 @@
+<%
+	Dim DSN
+	Set cnn= Server.CreateObject("ADODB.Connection")	
+	DSN = "dsn=tencsdl;uid=sa;pwd=123456;"
+	cnn.Open DSN
+%>
