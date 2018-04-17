@@ -4,19 +4,21 @@
 	End if
 %>
 <%	
-	dbName = ""
-	dbUser = ""
-	dbPass = ""
+	dbHost = "127.0.0.1"
+	dbName = "MyStyle"
+	dbUser = "sa"
+	dbPass = "1234567"
 	
-	dbConnectStr = ""
+	dbConnectStr = "Provider=SQLOLEDB.1;Data Source=" & dbHost & ";Initial Catalog=" & dbName & ";user id = '" & dbUser & "';password='" & dbPass & "'"
 
-
-    Sub SqlQuery(sql)
+    Function SqlQuery(sql)
 		set conn=Server.CreateObject("ADODB.Connection")
-		conn.Provider="Microsoft.Jet.OLEDB.4.0"
-		conn.Open(Server.Mappath("/db/data.mdb"))
-	
-	 return conn
-	END Sub
-
+		conn.Open(dbConnectStr)
+		
+		Set AdRec = CreateObject("ADODB.Recordset")
+		
+		AdRec.Open sql, conn
+		
+		SqlQuery = Adrec
+	END Function
 %>

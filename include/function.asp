@@ -1,4 +1,5 @@
 <!-- #include virtual ="/include/connect.asp" -->
+<!-- #include virtual ="/include/setting.asp" -->
 <%
 	
 
