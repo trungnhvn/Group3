@@ -11,8 +11,11 @@
 		
 		set ret = SqlQuery(sql) 
 		
-
+		IF ret.eof = true THEN
+			GetSetting = ""
+		ELSE
 			GetSetting = ret("VALUE")
+		END IF
 	End Function
 	
 	Function SetSetting(sKey,sValue)

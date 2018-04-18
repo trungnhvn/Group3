@@ -16,8 +16,9 @@
 		conn.Open(dbConnectStr)
 		
 		Set AdRec = CreateObject("ADODB.Recordset")
-		
-		AdRec.Open sql, conn
+		AdRec.ActiveConnection = conn
+		AdRec.Source = sql
+		AdRec.Open()
 		
 		SqlQuery = Adrec
 	END Function
