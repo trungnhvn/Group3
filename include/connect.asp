@@ -5,7 +5,7 @@
 %>
 <%	
 	dbHost = "127.0.0.1"
-	dbName = "MyStyle"
+	dbName = "DoAn1"
 	dbUser = "sa"
 	dbPass = "1234567"
 	
@@ -19,7 +19,7 @@
 		AdRec.ActiveConnection = conn
 		AdRec.Source = sql
 		AdRec.Open()
-		
-		SqlQuery = Adrec
+
+		Set SqlQuery = Adrec
 	END Function
 %>
