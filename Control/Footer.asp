@@ -4,19 +4,16 @@
                <div class="row row-links">
                   <ul class="foot-menu">
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">About us</a>
+                        <a class="text-white mbr-bold" href="home.asp" target="_blank">Trang Chủ</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Services</a>
+                        <a class="text-white mbr-bold" href="news.asp" target="_blank">Tin Tức</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Get In Touch</a>
+                        <a class="text-white mbr-bold" href="product.asp" target="_blank">Sản Phẩm</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Careers</a>
-                     </li>
-                     <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Work</a>
+                        <a class="text-white mbr-bold" href="#" target="_blank">Liên Hệ</a>
                      </li>
                   </ul>
                </div>
@@ -56,7 +53,7 @@
                </div>
                <div class="row row-copirayt">
                   <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                     © Copyright 2017 Mobirise - All Rights Reserved
+                     © Copyright 2018 - All Rights Reserved
                   </p>
                </div>
             </div>
@@ -73,3 +70,22 @@
       <script src="/assets/touchswipe/jquery.touch-swipe.min.js"></script>
       <script src="/assets/theme/js/script.js"></script>
       <input name="animation" type="hidden">
+      <link rel="stylesheet" href="/assets1/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+      <link rel="stylesheet" href="/assets1/web/assets/mobirise-icons/mobirise-icons.css">
+      <link rel="stylesheet" href="/assets1/tether/tether.min.css">
+      <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap-grid.min.css">
+      <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap-reboot.min.css">
+      <link rel="stylesheet" href="/assets1/dropdown/css/style.css">
+      <link rel="stylesheet" href="/assets1/socicon/css/styles.css">
+      <link rel="stylesheet" href="/assets1/animatecss/animate.min.css">
+      <link rel="stylesheet" href="/assets1/theme/css/style.css">
+      <link rel="stylesheet" href="/assets1/mobirise/css/mbr-additional.css" type="text/css">
+     <script src="/assets2/web/assets/jquery/jquery.min.js"></script>
+     <script src="/assets2/popper/popper.min.js"></script>
+     <script src="/assets2/tether/tether.min.js"></script>
+     <script src="/assets2/bootstrap/js/bootstrap.min.js"></script>
+     <script src="/assets2/smoothscroll/smooth-scroll.js"></script>
+     <script src="/assets2/dropdown/js/script.min.js"></script>
+     <script src="/assets2/touchswipe/jquery.touch-swipe.min.js"></script>
+     <script src="/assets2/theme/js/script.js"></script>
