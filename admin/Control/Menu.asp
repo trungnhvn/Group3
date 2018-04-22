@@ -34,61 +34,44 @@
             <a href="/"><i class="fa fa-fw fa-arrow-left"></i> Main Site</a>
         </li>
         <li>
-            <a href="/Admin/Dashboard.asp" class="active">
+            <a href="/Admin/Dashboard.asp" class="<%= PageActive("Dashboard") %>">
                 <i class="fa fa-fw fa-dashboard"></i> Dashboard
             </a>
         </li>
         <li>
-            <a href="#" data-toggle="collapse" class="">
-                <i class="fa fa-fw fa-cogs"></i> Settings <i class="fa fa-fw fa-caret-down"></i>
+            <a href="/Admin/Settings.asp" class="<%= PageActive("Settings") %>">
+                <i class="fa fa-fw fa-cogs"></i> Settings
             </a>
         </li>
         <li>
-            <a href="/Admin/AdminMenu" class="">
-                <i class="fa fa-fw fa-bars"></i> Menus
+            <a href="/Admin/Menu.asp" class="<%= PageActive("Menu") %>">
+                <i class="fa fa-fw fa-bars"></i> Quản lý menus
             </a>
         </li>
         <li>
-            <a href="/Admin/AdminCategory" class="">
-                <i class="fa fa-fw fa-folder-open-o"></i> Danh mục
+            <a href="/Admin/Category.asp" class="<%= PageActive("Category") %>">
+                <i class="fa fa-fw fa-folder-open-o"></i> Quản lý danh mục
             </a>
         </li>
         <li>
-            <a href="/Admin/AdminTopic" class="">
-                <i class="fa fa-fw fa-file-text-o"></i> Bài viết
+            <a href="/Admin/News.asp" class="<%= PageActive("News") %>">
+                <i class="fa fa-fw fa-file-text-o"></i> Quản lý bài viết
             </a>
         </li>
         <li>
-            <a href="/Admin/AdminContact" class="">
-                <i class="fa fa-fw fa-envelope"></i> Contact
+            <a href="/Admin/Contact.asp" class="<%= PageActive("Contact") %>">
+                <i class="fa fa-fw fa-envelope"></i> Quản lý liên hệ
             </a>
         </li>
         <li>
-            <a href="/Admin/AdminCarousel" class="">
-                <i class="fa fa-fw fa-picture-o"></i> Carousel
+            <a href="/Admin/Photo.asp" class="<%= PageActive("Photo") %>">
+                <i class="fa fa-fw fa-picture-o"></i> Quản lý hình ảnh
             </a>
         </li>
         <li>
-            <a href="#" data-toggle="collapse" data-target="#membership">
-                <i class="fa fa-fw fa-users"></i> User <i class="fa fa-fw fa-caret-down"></i>
+			<a href="/Admin/User.asp" class="<%= PageActive("User") %>">
+                <i class="fa fa-fw fa-users"></i> Quản lý tài khoản
             </a>
-            <ul id="membership" class="collapse">
-                <li>
-                    <a href="/Admin/Account/Manage" class="">Manage Users</a>
-                </li>
-                <li>
-                    <a href="/Admin/Account/ListAllRoles" class="">Manage Roles</a>
-                </li>
-                <li>
-                    <a href="/Admin/Account/AddRole" class="">Add Roles</a>
-                </li>
-                <li>
-                    <a href="/Admin/AdminSocial" class="">Social Logins</a>
-                </li>
-                <li>
-                    <a href="/Admin/ImportExport/Members" class="">Import / Export</a>
-                </li>
-            </ul>
         </li>
     </ul>
 </div>
