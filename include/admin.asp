@@ -1,16 +1,9 @@
 <!-- #include virtual ="/include/main.asp" -->
 <% 
-	SetSetting "WebName","svbsdv"
-	Response.Write(GetSetting("WebName"))
-
-
-
-
-
-
-
-
-
+	IF NOT IsLogin() THEN 
+		response.redirect "/admin/Login.asp"
+	END IF
+	
 
 
 
