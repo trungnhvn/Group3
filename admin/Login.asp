@@ -9,8 +9,8 @@
 	END IF
 
 	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
-		username=request.form("username")
-		password=request.form("password")
+		username=Trim(request.form("username"))
+		password=Trim(request.form("password"))
 		
 		IF username = "" THEN 
 			errortxt = "Tài khoản không được để trống!"
