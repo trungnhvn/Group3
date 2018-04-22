@@ -1,6 +1,6 @@
 <%
-	page = "dasboard"
-	title = "Dasboard"
+	page = "User"
+	title = "Quản lý tài khoản"
 %>
 
 <!-- #include virtual ="/include/admin.asp" -->
