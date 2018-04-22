@@ -1,6 +1,6 @@
 <%
-	page = "Menu"
-	title = "Quản lý menu"
+	page = "Contact"
+	title = "Quản lý liên hệ"
 %>
 
 <!-- #include virtual ="/include/admin.asp" -->

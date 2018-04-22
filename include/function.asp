@@ -2,6 +2,7 @@
 <!-- #include virtual ="/include/setting.asp" -->
 <%
 	Function PageActive(txt)
+		Dim str
 		str = StrComp(Lcase(page),Lcase(txt))
 		
 		IF str = 0 THEN 

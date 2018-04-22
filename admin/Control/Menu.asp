@@ -17,8 +17,11 @@
         <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <%= User_fullname %> <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
-                <a href="/PrivateMessage">
-                    <i class="fa fa-fw fa-envelope"></i> Private Messages
+				<a href="/Admin/User/ChangInfo.asp">
+                    <i class="fa fa-fw fa-credit-card"></i> Đổi thông tin
+                </a>
+                <a href="/Admin/User/ChangPass.asp">
+                    <i class="fa fa-fw fa-lock"></i> Đổi mật khẩu
                 </a>
             </li>
             <li class="divider"></li>
@@ -31,7 +34,7 @@
 <div class="collapse navbar-collapse mvcforum-nav">
     <ul class="nav navbar-nav side-nav">
         <li>
-            <a href="/"><i class="fa fa-fw fa-arrow-left"></i> Main Site</a>
+            <a href="/"><i class="fa fa-fw fa-arrow-left"></i> Trang chủ</a>
         </li>
         <li>
             <a href="/Admin/Dashboard.asp" class="<%= PageActive("Dashboard") %>">
