@@ -13,3 +13,5 @@ CREATE TABLE [dbo].[tblUser](
 	[User_power] NVARCHAR(200) NOT NULL,
 	[User_date] DATETIME NULL
 )
+
+INSERT INTO [dbo].[tblUser]([User_Acount],[User_pass],[User_power],[User_date]) VALUES ('admin','123','Admin',GETDATE())
