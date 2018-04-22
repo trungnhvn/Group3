@@ -70,3 +70,8 @@ input::-webkit-input-placeholder {
 	font-size: 11px;
 	text-align: center;
 }
+
+.warning{
+	color:red;
+	font-size: 12px;
+}

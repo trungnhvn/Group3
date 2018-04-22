@@ -14,7 +14,7 @@
             
 <ul class="nav navbar-right top-nav">
     <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> kaisermtv <b class="caret"></b></a>
+        <a class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> kaisermtv <b class="caret"></b></a>
         <ul class="dropdown-menu">
             <li>
                 <a href="/PrivateMessage">
@@ -23,7 +23,7 @@
             </li>
             <li class="divider"></li>
             <li>
-                <a href="/Members/Logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                <a href="/admin/Logout.asp"><i class="fa fa-fw fa-power-off"></i> Đăng xuất</a>
             </li>
         </ul>
     </li>

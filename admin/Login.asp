@@ -3,6 +3,30 @@
 	title = "Đăng nhập quản trị viên"
 %>
 <!-- #include virtual ="/include/main.asp" -->
+<%
+	IF IsLogin() THEN 
+		response.redirect "Dashboard.asp"
+	END IF
+
+	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
+		username=request.form("username")
+		password=request.form("password")
+		
+		IF username = "" THEN 
+			errortxt = "Tài khoản không được để trống!"
+		ELSE
+			IF password = "" THEN 
+				errortxt = "Mật khẩu không được để trống!"
+			ELSE
+				IF Login(username,password) THEN 
+					response.redirect "Dashboard.asp"
+				ELSE
+					errortxt = "Tài khoản hoặc mật khẩu không đúng!"
+				END IF
+			END IF
+		END IF
+	END IF
+%>
 <!DOCTYPE html>
 <html lang="en">
     <head> 
@@ -35,12 +59,17 @@
 	            </div> 
 				<div class="main-login main-center">
 					<form class="form-horizontal" method="post" action="/admin/login.asp">
+						<% IF errortxt <> "" THEN %>
+						<div class="warning">
+							<%= errortxt %>
+						</div>
+						<% END IF %>
 						<div class="form-group">
 							<label for="username" class="cols-sm-2 control-label">Tài khoản</label>
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="username" id="username"  placeholder="Nhập tên tài khoản"/>
+									<input type="text" class="form-control" name="username" id="username" value="<%= username %>" placeholder="Nhập tên tài khoản"/>
 								</div>
 							</div>
 						</div>
@@ -50,7 +79,7 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password"  placeholder="Nhập mật khẩu"/>
+									<input type="password" class="form-control" name="password" id="password" value="<%= password %>" placeholder="Nhập mật khẩu"/>
 								</div>
 							</div>
 						</div>
