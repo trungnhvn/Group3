@@ -4,11 +4,12 @@
     <title>Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <link rel="stylesheet" type="text/css" href="/admin/css/Imports.css" />
+    <link rel="stylesheet" type="text/css" href="/admin/css/fonts.googleapis.css" />
 	<link rel="stylesheet" type="text/css" href="/admin/css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="/admin/js/fancybox/jquery.fancybox.css" />
 	<link rel="stylesheet" type="text/css" href="/admin/css/sb-admin.css" />
 	<link rel="stylesheet" type="text/css" href="/admin/css/Admin.css" />
+	<link rel="stylesheet" type="text/css" href="/admin/css/font-awesome.min.css" />
 
 	<!--<link href="/css/bootstrap-responsive.css" rel="stylesheet">-->
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->

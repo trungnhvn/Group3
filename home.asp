@@ -5,21 +5,21 @@
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
 
+
 <!DOCTYPE html>
 <html >
    <head>
 <!-- #include virtual ="/Control/Head.asp" -->
    </head>
    <body>
-<!-- #include virtual ="/Control/Menu.asp" -->
-      <section class="engine"><a href="https://mobirise.ws/f">easy site maker</a></section>
+      <!-- #include virtual ="/Control/Menu.asp" -->
       <section class="header3 cid-qOxHqBb79x mbr-fullscreen mbr-parallax-background" id="header3-j">
          <div class="mbr-overlay" style="opacity: 0.2; background-color: rgb(0, 0, 0);">
          </div>
          <div class="container">
             <div class="media-container-row">
                <div class="mbr-figure" style="width: 105%;">
-                  <img src="assets/images/mbr-1-720x1080.jpg" alt="Mobirise" title="">
+                  <img src="assets/images/mbr-1-720x1080.jpg" title="">
                </div>
                <div class="media-content">
                   <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">WELCOME TO THE coffee&nbsp;</h1>

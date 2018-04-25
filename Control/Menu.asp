@@ -11,23 +11,23 @@
             <div class="menu-logo">
                <div class="navbar-brand">
                   <span class="navbar-logo">
-                  <a href="home.html">
-                  <img src="assets/images/mbr-758x531.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
+                  <a href="home.asp">
+                  <img src="assets/images/mbr-758x531.jpg" title="" style="height: 3.8rem;">
                   </a>
                   </span>
-                  <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="home.html">THE coffee</a></span>
+                  <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="home.asp">THE coffee</a></span>
                </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="home.html" aria-expanded="false">Trang Chủ</a>
+                     <a class="nav-link link text-white display-4" href="home.asp" aria-expanded="false">Trang Chủ</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="news.html" aria-expanded="false">Tin Tức</a>
+                     <a class="nav-link link text-white display-4" href="news.asp" aria-expanded="false">Tin Tức</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="product.html" aria-expanded="false">
+                     <a class="nav-link link text-white display-4" href="product.asp" aria-expanded="false">
                      Sản Phẩm</a>
                   </li>
                   <li class="nav-item">

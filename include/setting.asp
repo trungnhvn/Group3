@@ -15,6 +15,8 @@
 		ELSE
 			GetSetting = ret("VALUE")
 		END IF
+		
+		ret.close()
 	End Function
 	
 	Function SetSetting(sKey,sValue)
