@@ -42,7 +42,7 @@
                             Cappuccino là một biến cải của caffe latte (cà phê sữa). Thoạt tiên, cappuccino được pha với sô cô la nóng và đặc cùng kem tươi. Sau 1820, bột sô cô la được sáng chế nên được thêm vào dưới dạng những mảnh nhỏ trên kem tươi. Ba thể loại cà phê, sô cô la nóng, và bọt kem tươi tạo ra màu áo nâu của dòng tu phanxicô với những mảnh sô cô la phủ trên kem tươi thành hình chóp&nbsp;</p>
                     </div>
                     <div class="mbr-section-btn text-center">
-                        <a href="https://mobirise.com" class="btn btn-primary display-4">
+                        <a href="product_details.asp" class="btn btn-primary display-4">
                             Đọc Thêm
                         </a>
                     </div>
@@ -61,7 +61,7 @@
                             Espresso nghĩa đen là “ép”. Phương pháp pha chế này dùng nước nóng và hơi ép qua cà phê đã rang và nghiền sẵn với áp suất lớn (lý tưởng là 9-10 atmosphere) khiến cà phê đậm đặc gấp 1-15 lần lượng cà phê so với nước so với các phương pháp thông thường. Một cốc cà phê espresso là thứ nước cốt đen và đậm đặc với nồng độ rất cao nên dung tích cũng hạn chế khoảng ít hơn 20 ml.&nbsp;</p>
                     </div>
                     <div class="mbr-section-btn text-center">
-                        <a href="https://mobirise.com" class="btn btn-primary display-4">
+                        <a href="product_details.asp" class="btn btn-primary display-4">
                             Đọc Thêm
                         </a>
                     </div>
@@ -79,7 +79,7 @@
                         <p class="mbr-text mbr-fonts-style display-7">
                             Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa và 1/3 bọt sữa.</p>
                     </div>
-                    <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-primary display-4">
+                    <div class="mbr-section-btn text-center"><a href="product_details.asp" class="btn btn-primary display-4">
                             Đọc Thêm
                         </a></div>
                 </div>
@@ -112,10 +112,10 @@
                     </div>
                     <div class="plan-body">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Cà phê cappuccino bao gồm ba phần đều nhau: bọt sữa, cà phê espresso và sữa nóng.
+                            Cà phê cappuccino bao gồm ba phần đều nhau: bọt sữa, cà phê, sữa nóng.
                         </p>
                         <div class="mbr-section-btn pt-4 text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">MUA NGAY</a>
+                            <a href="product_details.asp" class="btn btn-primary display-4">MUA NGAY</a>
                         </div>
                     </div>
                 </div>
@@ -137,10 +137,11 @@
                     </div>
                     <div class="plan-body">
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Espresso là cà phê được pha theo kiểu Ý<br><br>
+                            Espresso là cà phê được pha theo kiểu Ý<br>
+                            <br><br>
                         </p>
                         <div class="mbr-section-btn pt-4 text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">MUA NGAY</a>
+                            <a href="product_details.asp" class="btn btn-primary display-4">MUA NGAY</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +164,7 @@
                             Loại cà phê sữa uống bằng ly.<br><br><br>
                         </p>
                         <div class="mbr-section-btn pt-4 text-center">
-                            <a href="https://mobirise.com" class="btn btn-primary display-4">MUA NGAY</a>
+                            <a href="product_details.asp" class="btn btn-primary display-4">MUA NGAY</a>
                         </div>
                     </div>
                 </div>

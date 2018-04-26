@@ -31,7 +31,7 @@
                      Sản Phẩm</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="https://mobirise.com">
+                     <a class="nav-link link text-white display-4" href="contact.asp">
                      Liên Hệ</a>
                   </li>
                </ul>
