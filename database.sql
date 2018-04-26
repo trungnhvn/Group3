@@ -15,3 +15,8 @@ CREATE TABLE [dbo].[tblUser](
 )
 
 INSERT INTO [dbo].[tblUser]([User_Acount],[User_pass],[User_power],[User_date]) VALUES ('admin','123','Admin',GETDATE())
+
+CREATE TABLE [dbo].[tblCategory](
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[VALUE] [ntext] NULL,
+)
