@@ -31,4 +31,17 @@
       <link rel="stylesheet" href="/assets2/socicon/css/styles.css">
       <link rel="stylesheet" href="/assets2/theme/css/style.css">
       <link rel="stylesheet" href="/assets2/mobirise/css/mbr-additional.css" type="text/css">
+
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
+        <meta name="description" content="">
+        <link rel="stylesheet" href="assets3/web/assets/mobirise-icons/mobirise-icons.css">
+        <link rel="stylesheet" href="assets3/tether/tether.min.css">
+        <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="assets3/bootstrap/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="assets3/dropdown/css/style.css">
+        <link rel="stylesheet" href="assets3/socicon/css/styles.css">
+        <link rel="stylesheet" href="assets3/theme/css/style.css">
+        <link rel="stylesheet" href="assets3/mobirise/css/mbr-additional.css" type="text/css">
    </head>

@@ -77,7 +77,7 @@
                         <h4 class="card-title mbr-fonts-style display-7">
                             Coffee Latte</h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa được làm nóng và 1/3 bọt sữa.</p>
+                            Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa và 1/3 bọt sữa.</p>
                     </div>
                     <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-primary display-4">
                             Đọc Thêm

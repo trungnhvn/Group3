@@ -89,3 +89,13 @@
      <script src="/assets2/dropdown/js/script.min.js"></script>
      <script src="/assets2/touchswipe/jquery.touch-swipe.min.js"></script>
      <script src="/assets2/theme/js/script.js"></script>
+
+     <link rel="stylesheet" href="/assets3/web/assets/mobirise-icons/mobirise-icons.css">
+     <link rel="stylesheet" href="/assets3/tether/tether.min.css">
+     <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap-grid.min.css">
+     <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap-reboot.min.css">
+     <link rel="stylesheet" href="/assets3/dropdown/css/style.css">
+     <link rel="stylesheet" href="/assets3/socicon/css/styles.css">
+     <link rel="stylesheet" href="/assets3/theme/css/style.css">
+     <link rel="stylesheet" href="/assets3/mobirise/css/mbr-additional.css" type="text/css">
