@@ -13,7 +13,7 @@
                         <a class="text-white mbr-bold" href="product.asp" target="_blank">Sản Phẩm</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Liên Hệ</a>
+                        <a class="text-white mbr-bold" href="contact.asp" target="_blank">Liên Hệ</a>
                      </li>
                   </ul>
                </div>
@@ -72,12 +72,10 @@
       <input name="animation" type="hidden">
       <link rel="stylesheet" href="/assets1/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
       <link rel="stylesheet" href="/assets1/web/assets/mobirise-icons/mobirise-icons.css">
-      <link rel="stylesheet" href="/assets1/tether/tether.min.css">
       <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap.min.css">
       <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap-grid.min.css">
       <link rel="stylesheet" href="/assets1/bootstrap/css/bootstrap-reboot.min.css">
       <link rel="stylesheet" href="/assets1/dropdown/css/style.css">
-      <link rel="stylesheet" href="/assets1/socicon/css/styles.css">
       <link rel="stylesheet" href="/assets1/animatecss/animate.min.css">
       <link rel="stylesheet" href="/assets1/theme/css/style.css">
       <link rel="stylesheet" href="/assets1/mobirise/css/mbr-additional.css" type="text/css">
@@ -89,13 +87,21 @@
      <script src="/assets2/dropdown/js/script.min.js"></script>
      <script src="/assets2/touchswipe/jquery.touch-swipe.min.js"></script>
      <script src="/assets2/theme/js/script.js"></script>
-
      <link rel="stylesheet" href="/assets3/web/assets/mobirise-icons/mobirise-icons.css">
-     <link rel="stylesheet" href="/assets3/tether/tether.min.css">
      <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap-grid.min.css">
      <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap-reboot.min.css">
      <link rel="stylesheet" href="/assets3/dropdown/css/style.css">
-     <link rel="stylesheet" href="/assets3/socicon/css/styles.css">
      <link rel="stylesheet" href="/assets3/theme/css/style.css">
      <link rel="stylesheet" href="/assets3/mobirise/css/mbr-additional.css" type="text/css">
+
+  <script src="/assets4/web/assets/jquery/jquery.min.js"></script>
+  <script src="/assets4/popper/popper.min.js"></script>
+  <script src="/assets4/tether/tether.min.js"></script>
+  <script src="/assets4/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets4/smoothscroll/smooth-scroll.js"></script>
+  <script src="/assets4/dropdown/js/script.min.js"></script>
+  <script src="/assets4/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="/assets4/theme/js/script.js"></script>
+  <script src="/assets4/formoid/formoid.min.js"></script>
+  
