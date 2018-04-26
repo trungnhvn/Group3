@@ -3,6 +3,7 @@
 	title = "Quản lý danh mục"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
+<!-- #include virtual ="/include/Category.asp" -->
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -25,31 +26,29 @@
 										<thead>
 											<tr>
 												<th style="width:50px">Edit</th>
-												<th>Tài khoản</th>
-												<th>Tên đầy đủ</th>
+												<th>Tiêu đề</th>
 												<th style="width:200px">Create date</th>
 												<th style="width:50px">Delete</th>
 											</tr>
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListUser(1,20)
+												Set Table = GetListCategory(1,10)
 												
 												Do While NOT Table.Eof
 											%>
 												<tr>
 													<td>
 														<span>
-															<a href="@Url.Action("Edit", new { id = it.Id })" class="btn-mvc">
+															<a href="/Admin/Category/Edit.asp?Id=<%= Table("Cat_Id") %>" class="btn-mvc">
 																<span class="glyphicon glyphicon-pencil"></span>
 															</a>
 														</span>
 													</td>
-													<td><%= Table("User_Acount") %></td>
-													<td><%= Table("User_fullname") %></td>
-													<td><%= Table("User_date") %></td>
+													<td><%= Table("Cat_Name") %></td>
+													<td><%= Table("Cat_date") %></td>
 													<td>
-														<a href="@Url.Action("Delete", new { id = it.Id })" class="btn-mvc">
+														<a href="/Admin/Category/Del.asp?Id=<%= Table("Cat_Id") %>" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
 													</td>

@@ -17,6 +17,10 @@ CREATE TABLE [dbo].[tblUser](
 INSERT INTO [dbo].[tblUser]([User_Acount],[User_pass],[User_power],[User_date]) VALUES ('admin','123','Admin',GETDATE())
 
 CREATE TABLE [dbo].[tblCategory](
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[VALUE] [ntext] NULL,
+	[Cat_Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Cat_Name] NVARCHAR(500) NOT NULL,
+	[Cat_Note] NTEXT NULL,
+	[Cat_Paren]	INT NULL,
+	[User_Acount] NVARCHAR(200) NOT NULL FOREIGN KEY REFERENCES tblUser(User_Acount),
+	[Cat_date] DATETIME NULL
 )
