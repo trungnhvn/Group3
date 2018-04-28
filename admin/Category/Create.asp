@@ -30,7 +30,7 @@
 				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
         
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/User/_UserOption.asp" -->
+                    <!-- #include virtual ="/admin/Category/_CategoryOption.asp" -->
 					<form method="POST" >
 					<div class="panel panel-default">
 						<div class="panel-heading">
