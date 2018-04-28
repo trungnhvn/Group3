@@ -1,6 +1,6 @@
 <%
-   page = "home"
-   title = "Trang chủ"
+   page = "Contact"
+   title = "Liên hệ"
 %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
@@ -22,7 +22,7 @@
 
     <figure class="mbr-figure">
         <div class="image-block" style="width: 100%;">
-            <img src="assets4/images/mbr-1620x1080.jpg" alt="Mobirise" title="">
+            <img src="assets4/images/mbr-1620x1080.jpg"  title="">
             
         </div>
     </figure>
@@ -55,7 +55,7 @@
                 <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:EjlOZ3V54buFbiBUaOG7iyBNaW5oIEtoYWksIFRwLiBWaW5oLCBOZ2jhu4cgQW4sIFZp4buHdCBOYW0iSCpGChQKEgkpVhZ9cM45MRGy01Hs0W2huhIUChIJrR1aC2TOOTERobprhZBoJvgaGAoKDfXPIAsVZqL8PhIKDUYKIgsVlBb-Pg" allowfullscreen=""></iframe></div>
             </div>
             <div class="col-md-6">
-                <h2 class="pb-3 align-left mbr-fonts-style display-2">Contact Us</h2>
+                <h2 class="pb-3 align-left mbr-fonts-style display-2">Liên lạc với chúng tôi</h2>
                 <div>
                     <div class="icon-block pb-3">
                         
@@ -67,19 +67,19 @@
                     <div data-form-alert="" hidden="">
                         Thanks for filling out the form!
                     </div>
-                    <form class="block mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="skB4DhyhNKG26yXTLWkzy60pUa8kxNGvL4XJwiPpIZXlxSSc9XLl3DzvYpu6ZUqZucglB0zkodai7rjNYiRfllmYm6NjuY0LuEiyj4YwrFSDk/YJ6CJ58reXDAisI7nm" data-form-field="Email">
+                    <form class="block mbr-form" action="#" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="skB4DhyhNKG26yXTLWkzy60pUa8kxNGvL4XJwiPpIZXlxSSc9XLl3DzvYpu6ZUqZucglB0zkodai7rjNYiRfllmYm6NjuY0LuEiyj4YwrFSDk/YJ6CJ58reXDAisI7nm" data-form-field="Email">
                         <div class="row">
                             <div class="col-md-6 multi-horizontal" data-for="name">
-                                <input type="text" class="form-control input" name="name" data-form-field="Name" placeholder="Your Name" required="" id="name-form4-5">
+                                <input type="text" class="form-control input" name="name" data-form-field="Name" placeholder="Họ tên" required="" id="name-form4-5">
                             </div>
                             <div class="col-md-6 multi-horizontal" data-for="phone">
-                                <input type="text" class="form-control input" name="phone" data-form-field="Phone" placeholder="Phone" required="" id="phone-form4-5">
+                                <input type="text" class="form-control input" name="phone" data-form-field="Phone" placeholder="SĐT" required="" id="phone-form4-5">
                             </div>
                             <div class="col-md-12" data-for="email">
                                 <input type="text" class="form-control input" name="email" data-form-field="Email" placeholder="Email" required="" id="email-form4-5">
                             </div>
                             <div class="col-md-12" data-for="message">
-                                <textarea class="form-control input" name="message" rows="3" data-form-field="Message" placeholder="Message" style="resize:none" id="message-form4-5"></textarea>
+                                <textarea class="form-control input" name="message" rows="3" data-form-field="Message" placeholder="Tin nhắn" style="resize:none" id="message-form4-5"></textarea>
                             </div>
                             <div class="input-group-btn col-md-12" style="margin-top: 10px;">
                                 <button href="" type="submit" class="btn btn-primary btn-form display-4">SEND MESSAGE</button>

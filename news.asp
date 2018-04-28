@@ -24,18 +24,18 @@
          <div class="container">
             <div class="mbr-row mbr-justify-content-center">
                <div class="image-block mbr-col-sm-12 mbr-col-md-6">
-                  <amp-img src="assets1/images/mbr-1080x720.jpg" layout="responsive" width="540" height="360" alt="Mobirise">
+                  <amp-img src="assets1/images/mbr-1080x720.jpg" layout="responsive" width="540" height="360" >
                   </amp-img>
                </div>
                <div class="text-block mbr-col-sm-12 mbr-col-md-6">
                   <h3 class="mbr-section-title mbr-fonts-style align-left display-5">
-                     WHAT CAN MOBILE OPTIMIZATION DO FOR YOU?
+                     Cho niềm đam mê, nghệ thuật và chất lượng.
                   </h3>
                   <p class="mbr-fonts-style mbr-text align-left display-7">
-                     Conversions fall by 12% for every extra second a webpage takes to load. If you want people to engage with your brand and improve the performance of your campaigns, you have to speed things up. AMP offers a way for you to give users a faster experience everywhere -- on ads, landing pages or your entire website.
+                     Một tách cà phê đậm đà của THE coffee khởi nguồn từ những vườn cà phê trĩu hạt. Sau mỗi vụ thu hoạch, từng hạt cà phê được chúng tôi chọn lựa kỹ càng bằng “tay”. Đội ngũ công nhân của chúng tôi có trách nhiệm đảm bảo chỉ những hạt cà phê nguyên liệu tốt nhất. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
                   </div>
                </div>
             </div>
@@ -50,13 +50,14 @@
                </div>
                <div class="text-block mbr-col-sm-12 mbr-col-md-6">
                   <h3 class="mbr-section-title mbr-fonts-style align-left display-5">
-                     WHAT CAN MOBILE OPTIMIZATION DO FOR YOU?
+                     Cuộc đời là của bạn, để nếm trải
                   </h3>
                   <p class="mbr-fonts-style mbr-text align-left display-7">
-                     Conversions fall by 12% for every extra second a webpage takes to load. If you want people to engage with your brand and improve the performance of your campaigns, you have to speed things up. AMP offers a way for you to give users a faster experience everywhere -- on ads, landing pages or your entire website.
+                     “Một tách cà phê uống vào buổi sáng mang lại sự hưng phấn tuyệt vời mà không một tách cà phê nào khác dù là buổi chiều hoặc buổi tối có thể tạo ra được” 
+                     Hãy bảo đảm cà phê bạn uống luôn luôn tươi mới. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
                   </div>
                </div>
             </div>
@@ -71,13 +72,16 @@
                </div>
                <div class="text-block mbr-col-sm-12 mbr-col-md-6">
                   <h3 class="mbr-section-title mbr-fonts-style align-left display-5">
-                     WHAT CAN MOBILE OPTIMIZATION DO FOR YOU?
+                     Cà phê nói gì?
                   </h3>
                   <p class="mbr-fonts-style mbr-text align-left display-7">
-                     Conversions fall by 12% for every extra second a webpage takes to load. If you want people to engage with your brand and improve the performance of your campaigns, you have to speed things up. AMP offers a way for you to give users a faster experience everywhere -- on ads, landing pages or your entire website.
+                     Cà phê nói gì?
+                     Đừng nên hâm nóng lại cà phê. Mỗi lần bạn pha, cà phê cần phải tươi mới. Chỉ pha vừa đủ để bạn uống lúc đó mà thôi. 
+                     Cuộc sống nói gì?
+                     Đừng hâm lại quá khứ. Quá khứ là chuyện đã rồi, chứ không phải là một lời bào chữa. Hãy để những chuyện quá khứ thuộc về quá khứ. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
                   </div>
                </div>
             </div>

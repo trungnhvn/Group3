@@ -25,7 +25,8 @@
                   <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">WELCOME TO THE coffee&nbsp;</h1>
                   <div class="mbr-section-text mbr-white pb-3 ">
                      <p class="mbr-text mbr-fonts-style display-5">
-                        Full width intro with image background, color overlay and a picture on the left. You can easily change the size of image in block parameters.
+                        <h3><i><q>Chừng nào vẫn còn cà phê trên thế giới, sao có thể quá tệ được chứ?</q></i></h3>
+
                      </p>
                   </div>
                </div>
@@ -37,7 +38,7 @@
             <div class="inner-container" style="width: 66%;">
                <hr class="line" style="width: 25%;">
                <div class="section-text align-center mbr-white mbr-fonts-style display-5">
-                  Mobirise is one of the easiest website development tools available today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
+                  Một tách cà phê uống vào buổi sáng mang lại sự hưng phấn tuyệt vời mà không một tách cà phê nào khác dù là buổi chiều hay buổi tối có thể tạo ra được.
                </div>
                <hr class="line" style="width: 25%;">
             </div>
@@ -53,7 +54,7 @@
                   <div class="card-box">
                      <h4 class="card-title py-3 mbr-fonts-style display-7">OUR TASTE</h4>
                      <p class="mbr-text mbr-fonts-style display-7">
-                        Mobirise is an easy WEBSITE BUILDER - just drop site elements to your page, add content and style it to look the way you like. <a href="http://mobirise.com">Learn more...</a>
+                       Bí quyết rang xay độc đáo của chúng tôi đã được nâng lên thành nghệ thuật. Thời gian và nhiệt độ rang là những quy trình trọng yếu đưa hạt cà phê đạt đến đỉnh cao tuyệt hảo của hương vị.
                      </p>
                   </div>
                </div>
@@ -64,7 +65,7 @@
                   <div class="card-box">
                      <h4 class="card-title py-3 mbr-fonts-style display-7">YOUR CHOICE</h4>
                      <p class="mbr-text mbr-fonts-style display-7">
-                        All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site. <a href="http://mobirise.com">Learn more...</a>
+                        Nhân viên pha chế của chúng tôi sẽ sáng tạo ra những thức uống cà phê tuyệt vời cho ngày mới của quý khách thêm hứng khởi.  
                      </p>
                   </div>
                </div>
@@ -75,7 +76,7 @@
                   <div class="card-box">
                      <h4 class="card-title py-3 mbr-fonts-style display-7">24/7 SERVICE</h4>
                      <p class="mbr-text mbr-fonts-style display-7">
-                        Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible. <a href="http://mobirise.com">Learn more...</a>
+                        Chúng tôi mong muốn đem đến cho bạn những trải nghiệm đáng nhớ mỗi lần ghé THE coffee. Hãy góp ý cho chúng tôi để chúng tôi có thể mang đến cho khách hàng những trải nghiệm tuyệt vời hơn thế.
                      </p>
                   </div>
                </div>
