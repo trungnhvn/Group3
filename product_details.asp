@@ -1,7 +1,7 @@
 
 <%
-   page = "home"
-   title = "Trang chủ"
+   page = "product_details"
+   title = "Cho tiết SP"
 %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
