@@ -1,6 +1,6 @@
 <%
-  page = "home"
-  title = "Trang chủ"
+  page = "product"
+  title = "Sản phẩm"
 %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
