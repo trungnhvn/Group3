@@ -11,7 +11,14 @@
 			PageActive = ""
 		END IF
 	End Function
-
+	
+	Function SelectActive(txt,txt2)
+		IF StrComp(txt,txt2) = 0 THEN 
+			SelectActive = "selected='selected'"
+		ELSE
+			SelectActive = ""
+		END IF
+	End Function
 
 
 
