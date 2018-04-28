@@ -43,7 +43,7 @@
                     </div>
                     <div class="mbr-section-btn text-center">
                         <a href="product_details.asp" class="btn btn-primary display-4">
-                            Đọc Thêm
+                            READ MORE
                         </a>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
             <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
-                        <img src="assets/images/mbr-1-676x451.jpg" alt="Mobirise" title="">
+                        <img src="assets/images/mbr-1-676x451.jpg" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">
@@ -62,7 +62,7 @@
                     </div>
                     <div class="mbr-section-btn text-center">
                         <a href="product_details.asp" class="btn btn-primary display-4">
-                            Đọc Thêm
+                            READ MORE
                         </a>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa và 1/3 bọt sữa.</p>
                     </div>
                     <div class="mbr-section-btn text-center"><a href="product_details.asp" class="btn btn-primary display-4">
-                            Đọc Thêm
+                            READ MORE
                         </a></div>
                 </div>
             </div>

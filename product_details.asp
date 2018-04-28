@@ -17,7 +17,7 @@
 
     <figure class="mbr-figure">
         <div class="image-block" style="width: 100%;">
-            <img src="assets3/images/mbr-1620x1080.jpg" alt="Mobirise" title="">
+            <img src="assets3/images/mbr-1620x1080.jpg"  title="">
             
         </div>
     </figure>
@@ -30,7 +30,7 @@
             <div class="col-12 col-md-8">
                 <div class="media-container-row">
                     <div class="mbr-figure" style="width: 50%;">
-                      <img src="assets3/images/mbr-436x654.jpg" alt="Mobirise" title="">  
+                      <img src="assets3/images/mbr-436x654.jpg"  title="">  
                     </div>
                     <div class="media-content">
                         <div class="mbr-section-text">
