@@ -1,5 +1,6 @@
 <!-- #include virtual ="/include/connect.asp" -->
 <!-- #include virtual ="/include/setting.asp" -->
+<!-- #include virtual ="/include/Menu.asp" -->
 <%
 	Function PageActive(txt)
 		Dim str
@@ -20,7 +21,13 @@
 		END IF
 	End Function
 
-
+	Function SelectHidden(txt,txt2)
+		IF NOT StrComp(txt,txt2) = 0 THEN 
+			SelectHidden = "hidden"
+		ELSE
+			SelectHidden = ""
+		END IF
+	End Function
 
 
 

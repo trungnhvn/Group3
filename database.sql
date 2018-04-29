@@ -24,3 +24,12 @@ CREATE TABLE [dbo].[tblCategory](
 	[User_Acount] NVARCHAR(200) NOT NULL FOREIGN KEY REFERENCES tblUser(User_Acount),
 	[Cat_date] DATETIME NULL
 )
+
+CREATE TABLE [dbo].[tblMenu](
+	[Menu_Id]		INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Menu_Name]		NVARCHAR(500) NOT NULL,
+	[Menu_Paren]	INT NULL,
+	[Menu_Type]		INT NOT NULL,
+	[Menu_Link]		NVARCHAR(500) NULL,
+	[ShotOder]		INT NOT NULL
+)
