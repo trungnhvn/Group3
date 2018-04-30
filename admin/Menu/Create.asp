@@ -1,6 +1,6 @@
 <%
-	page = "Category"
-	title = "Tạo danh mục"
+	page = "Menu"
+	title = "Tạo menu"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Menu.asp" -->

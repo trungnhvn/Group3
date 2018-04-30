@@ -3,37 +3,55 @@
 	title = "Chỉnh sửa menu"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
-<!-- #include virtual ="/include/menu.asp" -->
 <%
+	iType = "1"
+	iPage = "0"
+	
 	id = request.querystring("Id")
 	IF id <> "" THEN
-		Set cat = GetCategory(id)
-		IF NOT cat.EOF THEN
+		Set menu = GetMenu(id)
+		IF NOT menu.EOF THEN
+			name=menu("Menu_Name")
+			paren=menu("Menu_Paren")
+			iType=menu("Menu_Type")
+			IF StrComp(iType,"0") = 0 THEN 
+				link=menu("Menu_Link")
+			ELSEIF StrComp(iType,"0") = 1 THEN 
+				iPage=menu("Menu_Link")
+			END IF
+			ShotOder=menu("ShotOder")
 			
-			name = cat("Cat_Name")
-			paren = cat("Cat_Paren")
-			note = cat("Cat_Note")
-			
-
 			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 				name=Trim(request.form("Name"))
 				paren=request.form("Paren")
-				note=Trim(request.form("Note"))
+				iType=request.form("iType")
+				iPage=request.form("iPage")
+				link=request.form("Link")
+				ShotOder=request.form("ShotOder")
 				
 				IF name = "" THEN 
-					errortxt = "Tên danh mục không được để trống!"
+					errortxt = "Tên menu không được để trống!"
 				ELSE
-					UpdateCategory id,name,paren,note
+					val = ""
 					
-					response.redirect "/Admin/Category.asp"
+					IF StrComp(iType,"0") = 0 THEN 
+						val = link
+					ELSEIF StrComp(iType,"1") = 0 THEN
+						val = iPage
+					END IF
+				
+					UpdateMenu id,name,paren,itype,val,shotoder
+					
+					response.redirect "/Admin/Menu.asp"
 				END IF
 			END IF
 		ELSE
-			response.redirect "/Admin/Category.asp"
+			response.redirect "/Admin/Menu.asp"
 		END IF
 	ELSE
-		response.redirect "/Admin/Category.asp"
+		response.redirect "/Admin/Menu.asp"
 	END IF
+
 %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -46,7 +64,7 @@
 				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
         
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/Menu/_MenuOption.asp" -->
+                    <!-- #include virtual ="/admin/Menu/_menuOption.asp" -->
 					<form method="POST" >
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -55,23 +73,23 @@
 						<div class="panel-collapse">
 							<div class="panel-body">
 								<div class="form-group">
-									<label for="Name">Tên danh mục(*)</label>
+									<label for="Name">Tên menu(*)</label>
 									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="Name" name="Name" type="text" value="<%= name %>">
 									<span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
 								</div>
 
 								<div class="form-group">
-									<label for="Paren">Danh mục cha</label>
+									<label for="Paren">Menu cha</label>
 									
 									<select class="form-control" name="Paren" id="Paren">
 										<option value=""></option>
 									<%
-										Set Table = GetAllCategory()
+										Set Table = GetAllMenu()
 										
 										Do While NOT Table.Eof
-										IF NOT StrComp(Table("Cat_Id"),id) = 0 THEN
+										IF NOT StrComp(id,Table("Menu_Id")) = 0 THEN
 									%>
-										<option value="<%= Table("Cat_Id") %>" <%= SelectActive(Table("Cat_Id"),paren) %> ><%= Table("Cat_Name") %></option>
+										<option value="<%= Table("Menu_Id") %>" <%= SelectActive(Table("Menu_Id"),paren) %> ><%= Table("Menu_Name") %></option>
 									<%	
 										END IF
 										Table.movenext
@@ -84,10 +102,56 @@
 								</div>
 								
 								<div class="form-group">
-									<label for="Note">Chú thích</label>
-									<textarea class="form-control" data-val="true" id="Note" name="Note" type="text"><%= note %></textarea >
-									<span class="field-validation-valid" data-valmsg-for="Note" data-valmsg-replace="true"></span>
+									<label for="iType">Kiểu liên kết</label>
+									
+									<select class="form-control" name="iType" id="iType" onchange="select(this)">
+										<option value="0" <%= SelectActive("0",iType) %> >Link liên kết</option>
+										<option value="1" <%= SelectActive("1",iType) %> >Trang sẵn có</option>
+									</select>
+									<span class="field-validation-valid" data-valmsg-for="iType" data-valmsg-replace="true"></span>
 								</div>
+								
+								<div class="form-group <%= SelectHidden("0",iType) %>" id="linkgroup" >
+									<label for="Link">Link</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="Link" name="Link" type="text" value="<%= Link %>">
+									<span class="field-validation-valid" data-valmsg-for="Link" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group <%= SelectHidden("1",iType) %>" id="pagegroup" >
+									<label for="iPage">Trang sẵn có</label>
+									
+									<select class="form-control" name="iPage" id="iPage">
+										<option value="0" <%= SelectActive("0",iPage) %> >Trang chủ</option>
+										<option value="1" <%= SelectActive("1",iPage) %> >Trang tin tức</option>
+										<option value="2" <%= SelectActive("2",iPage) %> >Trang sản phẩm</option>
+										<option value="3" <%= SelectActive("3",iPage) %> >Trang giới thiệu</option>
+									</select>
+									<span class="field-validation-valid" data-valmsg-for="iPage" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group">
+									<label for="ShotOder">Thứ tự xắp xếp</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="ShotOder" name="ShotOder" type="text" value="<%= ShotOder %>">
+									<span class="field-validation-valid" data-valmsg-for="ShotOder" data-valmsg-replace="true"></span>
+								</div>
+								
+								<script>
+									var objlinkgroup = document.getElementById("linkgroup");
+									var objpagegroup = document.getElementById("pagegroup");
+								
+									function select(obj)
+									{
+										if(obj.value == "0"){
+											objpagegroup.className += " hidden";
+											objlinkgroup.className = objlinkgroup.className.replace(" hidden","");
+										}else if(obj.value == "1"){
+											objlinkgroup.className += " hidden";
+											objpagegroup.className = objpagegroup.className.replace(" hidden","");
+										}
+									
+									}
+								
+								</script>
 							</div>
 						</div>
 					</div>
