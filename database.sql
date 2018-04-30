@@ -25,6 +25,20 @@ CREATE TABLE [dbo].[tblCategory](
 	[Cat_date] DATETIME NULL
 )
 
+CREATE TABLE [dbo].[tblNews](
+	[News_Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[News_Title] NVARCHAR(500) NOT NULL,
+	[News_Description] NVARCHAR(500) NULL,
+	[News_Content] NTEXT NULL,
+	[News_Image] NVARCHAR(500) NULL,
+	[Cat_Id]	INT NULL,
+	[News_Status] INT NOT NULL,
+	[User_Acount] NVARCHAR(200) NOT NULL FOREIGN KEY REFERENCES tblUser(User_Acount),
+	[News_EditBy] NVARCHAR(200) NULL FOREIGN KEY REFERENCES tblUser(User_Acount),
+	[News_EditDate] DATETIME NULL,
+	[News_Date] DATETIME NULL
+)
+
 CREATE TABLE [dbo].[tblMenu](
 	[Menu_Id]		INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[Menu_Name]		NVARCHAR(500) NOT NULL,
