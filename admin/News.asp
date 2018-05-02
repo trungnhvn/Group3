@@ -3,7 +3,7 @@
 	title = "Quản lý bài viết"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
-
+<!-- #include virtual ="/include/news.asp" -->
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -17,7 +17,7 @@
                     <!-- #include virtual ="/admin/News/_NewsOption.asp" -->
 					<div class="panel">
 						<div class="panel-heading">
-							<h5>List Topic</h5>
+							<h5><%= title %></h5>
 						</div>
 						<div class="panel-content">
 							<div id="container">
@@ -26,31 +26,31 @@
 										<thead>
 											<tr>
 												<th style="width:50px">Edit</th>
-												<th>Tài khoản</th>
-												<th>Tên đầy đủ</th>
+												<th>Tiêu đề</th>
+												<th style="width:200px">Người đăng</th>
 												<th style="width:200px">Create date</th>
 												<th style="width:50px">Delete</th>
 											</tr>
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListUser(1,20)
+												Set Table = GetListNews(1,20)
 												
 												Do While NOT Table.Eof
 											%>
 												<tr>
 													<td>
 														<span>
-															<a href="@Url.Action("Edit", new { id = it.Id })" class="btn-mvc">
+															<a href="/Admin/News/Edit.asp?Id=<%= Table("News_Id") %>" class="btn-mvc">
 																<span class="glyphicon glyphicon-pencil"></span>
 															</a>
 														</span>
 													</td>
+													<td><%= Table("News_Title") %></td>
 													<td><%= Table("User_Acount") %></td>
-													<td><%= Table("User_fullname") %></td>
-													<td><%= Table("User_date") %></td>
+													<td><%= Table("News_Date") %></td>
 													<td>
-														<a href="@Url.Action("Delete", new { id = it.Id })" class="btn-mvc">
+														<a href="/Admin/News/Del.asp?Id=<%= Table("News_Id") %>" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
 													</td>
