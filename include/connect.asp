@@ -5,7 +5,7 @@
 %>
 <%	
 	dbHost = "127.0.0.1"
-	dbName = "doanky1"
+	dbName = "DoAnky_1"
 	dbUser = "sa"
 	dbPass = "871997"
 	
