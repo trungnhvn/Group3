@@ -21,18 +21,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="home.asp" aria-expanded="false">Trang Chủ</a>
+                     <a class="nav-link link text-white display-4" href="home.asp" aria-expanded="false">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="news.asp" aria-expanded="false">Tin Tức</a>
+                     <a class="nav-link link text-white display-4" href="news.asp" aria-expanded="false">News</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link link text-white display-4" href="product.asp" aria-expanded="false">
-                     Sản Phẩm</a>
+                     Product</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link link text-white display-4" href="contact.asp">
-                     Liên Hệ</a>
+                     Contact</a>
                   </li>
                </ul>
             </div>
