@@ -3,22 +3,22 @@
 	title = "Đăng bài viết"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
-<!-- #include virtual="/ckeditor/ckeditor.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
 <!-- #include virtual ="/include/Category.asp" -->
 <%
 	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 		name=Trim(request.form("Title"))
 		paren=request.form("Paren")
-		Content=Trim(request.form("Content"))
+		Description=Trim(request.form("Description"))
+		Content=request.form("Content")
+		Image=Trim(request.form("Image"))
 		
 		IF name = "" THEN 
 			errortxt = "Tên danh mục không được để trống!"
 		ELSE
-			errortxt = Content
-			'CreateCategory name,paren,note
+			CreateNews name,paren,Image,Description,Content
 			
-			'response.redirect "/Admin/News.asp"
+			response.redirect "/Admin/News.asp"
 		END IF
 	END IF
 %>
@@ -43,7 +43,7 @@
 							<div class="panel-body">
 								<div class="form-group">
 									<label for="Title">Tiêu đề(*)</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="Title" name="Title" type="text" value="<%= name %>">
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" id="Title" name="Title" type="text" value="<%= name %>">
 									<span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
 								</div>
 
@@ -51,7 +51,6 @@
 									<label for="Paren">Danh mục cha</label>
 									
 									<select class="form-control" name="Paren" id="Paren">
-										<option value=""></option>
 									<%
 										Set Table = GetAllCategory()
 										
@@ -69,8 +68,17 @@
 								</div>
 								
 								<div class="form-group">
+									<label for="Image">Ảnh đại diện</label>
+                                    <div style="width:100%;display:table">
+									    <input class="form-control" style="width:calc(100% - 100px);float:left;" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500"  id="Image" name="Image" type="text" value="<%= Image %>">
+									    <button style="width:90px;float:left;margin-left:10px;height:34px" type="button" onclick="selectFileWithCKFinder('Image')">Chọn ảnh</button>
+                                    </div>
+                                    <span class="field-validation-valid" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group">
 									<label for="Description">Mô tả</label>
-									<textarea class="form-control" data-val="true" id="Description" name="Description" type="text"><%= note %></textarea >
+									<textarea class="form-control" data-val="true" id="Description" name="Description" type="text"><%= Description %></textarea >
 									<span class="field-validation-valid" data-valmsg-for="Description" data-valmsg-replace="true"></span>
 								</div>
 								
@@ -78,12 +86,9 @@
 									<label for="Content">Nội dung</label>
 									<textarea class="form-control" data-val="true" id="Content" name="Content" type="text"><%= Content %></textarea >
 									<span class="field-validation-valid" data-valmsg-for="Content" data-valmsg-replace="true"></span>
-									<%
-										dim editor
-										set editor = New CKEditor							
-										editor.basePath = "/ckeditor/"
-										editor.replaceInstance "Content"
-									%>
+									<script type="text/javascript">//<![CDATA[
+                                        CKEDITOR.replace('Content');
+                                    //]]></script>
 								</div>
 							</div>
 						</div>
