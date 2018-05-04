@@ -5,9 +5,9 @@
 %>
 <%	
 	dbHost = "127.0.0.1"
-	dbName = "DoAn1"
+	dbName = "DoAnky_1"
 	dbUser = "sa"
-	dbPass = "1234567"
+	dbPass = "871997"
 	
 	dbConnectStr = "Provider=SQLOLEDB.1;Data Source=" & dbHost & ";Initial Catalog=" & dbName & ";user id = '" & dbUser & "';password='" & dbPass & "'"
 
