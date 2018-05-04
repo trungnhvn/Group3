@@ -19,6 +19,7 @@
 			IF NOT ACCTINFO.EOF THEN
 				
 				User_Acount 	= Trim(ACCTINFO("User_Acount"))
+				User_pass		= ACCTINFO("User_pass")
 				User_email		= ACCTINFO("User_email")
 				User_fullname	= Trim(""&ACCTINFO("User_fullname"))
 				User_birthday	= ACCTINFO("User_birthday")
@@ -87,9 +88,10 @@
 	
 	
 	Function ChangePass(acct,pass,newpass)
-	
-	
-	
+		Dim sql
+		sql = "UPDATE [dbo].[tblUser] SET User_pass = N'"& newpass &"' WHERE User_Acount = N'"& acct &"' AND User_pass = N'"& pass &"'"
+		
+		SqlQuery(sql)
 	End Function
 	
 	
