@@ -21,7 +21,7 @@
 				errortxt = "Mật khẩu không được để trống!"
 			ELSE
 				IF StrComp(password,password2) = 0 THEN
-				
+					CreateAccount username,password,email,fullname,birthday,sex,power
 				ELSE
 					errortxt = "Nhập lại mật khẩu không khớp!"
 				END IF

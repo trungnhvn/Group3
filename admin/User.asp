@@ -13,12 +13,7 @@
         <!-- #include virtual ="/admin/control/menu.asp" -->
         <div id="page-wrapper">
             <div class="container-fluid">
-                
-
-				<div id="jsquickmessage" style="display:none;"></div>
-        
-
-
+                <!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
                 <div class="mainadminbody" style="min-height:100%;">
                     <!-- #include virtual ="/admin/User/_UserOption.asp" -->
 					<div class="panel">
