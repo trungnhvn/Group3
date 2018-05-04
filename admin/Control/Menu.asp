@@ -34,7 +34,7 @@
 <div class="collapse navbar-collapse mvcforum-nav">
     <ul class="nav navbar-nav side-nav">
         <li>
-            <a href="/"><i class="fa fa-fw fa-arrow-left"></i> Trang chủ</a>
+            <a href="/Home.asp"><i class="fa fa-fw fa-arrow-left"></i> Trang chủ</a>
         </li>
         <li>
             <a href="/Admin/Dashboard.asp" class="<%= PageActive("Dashboard") %>">
@@ -59,6 +59,11 @@
         <li>
             <a href="/Admin/News.asp" class="<%= PageActive("News") %>">
                 <i class="fa fa-fw fa-file-text-o"></i> Quản lý bài viết
+            </a>
+        </li>
+		<li>
+            <a href="/Admin/Product.asp" class="<%= PageActive("Product") %>">
+                <i class="fa fa-fw fa-file-text-o"></i> Quản lý sản phẩm
             </a>
         </li>
         <li>

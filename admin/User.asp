@@ -2,9 +2,7 @@
 	page = "User"
 	title = "Quản lý tài khoản"
 %>
-
 <!-- #include virtual ="/include/admin.asp" -->
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -42,7 +40,7 @@
 												<tr>
 													<td>
 														<span>
-															<a href="@Url.Action("Edit", new { id = it.Id })" class="btn-mvc">
+															<a href="/Admin/User/Edit.asp?Acct=<%= Table("User_Acount") %>" class="btn-mvc">
 																<span class="glyphicon glyphicon-pencil"></span>
 															</a>
 														</span>
@@ -51,7 +49,7 @@
 													<td><%= Table("User_fullname") %></td>
 													<td><%= Table("User_date") %></td>
 													<td>
-														<a href="@Url.Action("Delete", new { id = it.Id })" class="btn-mvc">
+														<a href="/Admin/User/Del.asp?Acct=<%= Table("User_Acount") %>" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
 													</td>

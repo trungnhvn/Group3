@@ -1,12 +1,11 @@
 <%
 	page = "User"
-	title = "Chỉnh sửa thông tin tài khoản"
+	title = "Đổi thông tin tài khoản"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <%
-	acct = request.querystring("Acct")
-	IF acct <> "" THEN
-		Set acc = GetAcctInfo(acct)
+
+		Set acc = GetAcctInfo(User_Acount)
 		IF NOT acc.EOF THEN
 			
 			Acount 		= Trim(acc("User_Acount"))
@@ -14,7 +13,6 @@
 			fullname	= acc("User_fullname")
 			birthday	= acc("User_birthday")
 			sex			= acc("User_sex")
-			power		= acc("User_power")
 			
 
 			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
@@ -23,7 +21,6 @@
 				fullname	= request.form("fullname")
 				birthday	= request.form("birthday")
 				sex			= request.form("sex")
-				power		= request.form("power")
 				
 				IF name = "" THEN 
 					errortxt = "Tên danh mục không được để trống!"
@@ -35,9 +32,6 @@
 		ELSE
 			response.redirect "/Admin/User.asp"
 		END IF
-	ELSE
-		response.redirect "/Admin/User.asp"
-	END IF
 	
 	
 %>
@@ -52,7 +46,6 @@
 				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
         
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/News/_NewsOption.asp" -->
 					<form method="POST" >
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -83,11 +76,6 @@
 									<span class="field-validation-valid" data-valmsg-for="MetaDesc" data-valmsg-replace="true"></span>
 								</div>
 								
-								<div class="form-group">
-									<label for="Power">Chức vụ</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Power" name="Power" type="text" value="<%= power %>">
-									<span class="field-validation-valid" data-valmsg-for="Power" data-valmsg-replace="true"></span>
-								</div>
 							</div>
 						</div>
 					</div>

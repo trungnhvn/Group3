@@ -1,9 +1,9 @@
 <%
-	page = "Photo"
-	title = "Quản lý hình ảnh"
+	page = "Product"
+	title = "Quản lý sản phẩm"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
-<!-- #include virtual ="/include/Photo.asp" -->
+<!-- #include virtual ="/include/Product.asp" -->
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -12,9 +12,9 @@
         <!-- #include virtual ="/admin/control/menu.asp" -->
         <div id="page-wrapper">
             <div class="container-fluid">
-				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
+                <!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/Photo/_PhotoOption.asp" -->
+                    <!-- #include virtual ="/admin/Product/_ProductOption.asp" -->
 					<div class="panel">
 						<div class="panel-heading">
 							<h5><%= title %></h5>
@@ -27,30 +27,30 @@
 											<tr>
 												<th style="width:50px">Edit</th>
 												<th>Tiêu đề</th>
-												<th style="width:200px">Nhóm</th>
+												<th style="width:200px">Người đăng</th>
 												<th style="width:200px">Create date</th>
 												<th style="width:50px">Delete</th>
 											</tr>
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListPhoto(1,10)
+												Set Table = GetListProduct(1,20)
 												
 												Do While NOT Table.Eof
 											%>
 												<tr>
 													<td>
 														<span>
-															<a href="/Admin/Photo/Edit.asp?Id=<%= Table("Photo_Id") %>" class="btn-mvc">
+															<a href="/Admin/Product/Edit.asp?Id=<%= Table("Product_Id") %>" class="btn-mvc">
 																<span class="glyphicon glyphicon-pencil"></span>
 															</a>
 														</span>
 													</td>
-													<td><%= Table("Photo_Name") %></td>
-													<td><%= Table("Photo_Group") %></td>
-													<td><%= Table("Photo_Date") %></td>
+													<td><%= Table("Product_Name") %></td>
+													<td><%= Table("User_Acount") %></td>
+													<td><%= Table("Product_Date") %></td>
 													<td>
-														<a href="/Admin/Photo/Del.asp?Id=<%= Table("Photo_Id") %>" class="btn-mvc">
+														<a href="/Admin/Product/Del.asp?Id=<%= Table("Product_Id") %>" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
 													</td>

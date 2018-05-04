@@ -6,8 +6,8 @@
 <%
 	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 		username=Trim(request.form("UserName"))
-		password=Trim(request.form("Password"))
-		password2=Trim(request.form("Password2"))
+		password=request.form("Password")
+		password2=request.form("Password2")
 		fullname=Trim(request.form("FullName"))
 		email=Trim(request.form("Email"))
 		sex=request.form("Sex")
