@@ -32,7 +32,7 @@
 				IF name = "" THEN 
 					errortxt = "Tên danh mục không được để trống!"
 				ELSE
-					CreateProduct name,paren,Image,Price,Component,Description,Content
+					UpdateProduct id,name,paren,Image,Price,Component,Description,Content
 					
 					response.redirect "/Admin/Product.asp"
 				END IF
