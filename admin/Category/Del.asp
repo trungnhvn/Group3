@@ -10,7 +10,7 @@
 		Set product = GetCategory(id)
 		IF NOT product.EOF THEN
 			
-			name=product("Contact_Name")
+			name=product("Cat_Name")
 			
 			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 				

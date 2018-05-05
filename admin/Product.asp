@@ -4,6 +4,16 @@
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Product.asp" -->
+<%
+	limit = 20
+	count = GetCountProduct()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -34,7 +44,7 @@
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListProduct(1,20)
+												Set Table = GetListProduct(pagenum,limit)
 												
 												Do While NOT Table.Eof
 											%>
@@ -64,6 +74,7 @@
 										</tbody>
 									</table>
 								</div>
+								<!-- #include virtual ="/admin/control/paging.asp" -->
 							</div>
 						</div>
 					</div>

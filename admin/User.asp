@@ -3,6 +3,16 @@
 	title = "Quản lý tài khoản"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
+<%
+	limit = 20
+	count = GetCountUser()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -19,7 +29,6 @@
 							<h5>List Topic</h5>
 						</div>
 						<div class="panel-content">
-							<div id="container">
 								 <div class="tablescroll">
 									<table class="table table-bordered table-striped">
 										<thead>
@@ -33,7 +42,7 @@
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListUser(1,20)
+												Set Table = GetListUser(pagenum,limit)
 												
 												Do While NOT Table.Eof
 											%>
@@ -63,7 +72,7 @@
 										</tbody>
 									</table>
 								</div>
-							</div>
+								<!-- #include virtual ="/admin/control/paging.asp" -->
 						</div>
 					</div>
 

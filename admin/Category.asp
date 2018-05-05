@@ -4,6 +4,16 @@
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Category.asp" -->
+<%
+	limit = 10
+	count = GetCountCategory()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -20,7 +30,6 @@
 							<h5><%= title %></h5>
 						</div>
 						<div class="panel-content">
-							<div id="container">
 								 <div class="tablescroll">
 									<table class="table table-bordered table-striped">
 										<thead>
@@ -33,7 +42,7 @@
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListCategory(1,10)
+												Set Table = GetListCategory(pagenum,limit)
 												
 												Do While NOT Table.Eof
 											%>
@@ -62,7 +71,7 @@
 										</tbody>
 									</table>
 								</div>
-							</div>
+									<!-- #include virtual ="/admin/control/paging.asp" -->
 						</div>
 					</div>
 

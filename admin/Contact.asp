@@ -4,6 +4,16 @@
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Contact.asp" -->
+<%
+	limit = 10
+	count = GetCountContact()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -36,7 +46,7 @@
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListContact(1,10)
+												Set Table = GetListContact(pagenum,limit)
 												
 												Do While NOT Table.Eof
 											%>
@@ -68,6 +78,8 @@
 										</tbody>
 									</table>
 								</div>
+							
+								<!-- #include virtual ="/admin/control/paging.asp" -->
 							</div>
 						</div>
 					</div>

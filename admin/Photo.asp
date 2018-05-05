@@ -4,6 +4,16 @@
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Photo.asp" -->
+<%
+	limit = 10
+	count = GetCountPhoto()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html lang="en">
 <!-- #include virtual ="/admin/control/header.asp" -->
@@ -34,7 +44,7 @@
 										</thead>
 										<tbody>
 											<%
-												Set Table = GetListPhoto(1,10)
+												Set Table = GetListPhoto(pagenum,limit)
 												
 												Do While NOT Table.Eof
 											%>
@@ -64,6 +74,7 @@
 										</tbody>
 									</table>
 								</div>
+								<!-- #include virtual ="/admin/control/paging.asp" -->
 							</div>
 						</div>
 					</div>
