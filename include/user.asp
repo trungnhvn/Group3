@@ -114,6 +114,13 @@
 		SqlQuery(sql)
 	End Function
 	
+	Function NewPass(acct,pass)
+		Dim sql
+		sql = "UPDATE [dbo].[tblUser] SET User_pass = N'"& pass &"' WHERE User_Acount = N'"& acct &"'"
+		
+		SqlQuery(sql)
+	End Function
+	
 	Function UpdateUser(acct,fullname,email,birthday,sex,power)
 		Dim sql
 		sql = "UPDATE [dbo].[tblUser] SET User_email = N'"& email &"',User_fullname = N'"& fullname &"',User_birthday = N'"& birthday &"',User_sex = "& sex &",User_power = N'"& power &"' WHERE User_Acount = N'"& acct &"'"
