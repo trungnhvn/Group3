@@ -15,6 +15,12 @@
 		set GetProduct = SqlQuery(sql)
 	End Function
 	
+	Function DeleteProduct(id)
+		dim sql,ret
+		sql = "DELETE FROM [dbo].[tblProduct] WHERE Product_Id = " & id
+		
+		SqlQuery(sql)
+	End Function
 	
 	Function CreateProduct(name,paren,img,price,component,des,content)
 		Dim sql 
@@ -24,9 +30,9 @@
 		SqlQuery(sql)
 	End Function 
 	
-	Function UpdateNews(Id,name,paren,img,des,content)
+	Function UpdateProduct(Id,name,paren,img,price,component,des,content)
 		Dim sql 
-		sql = "UPDATE [dbo].[tblNews] SET News_Title = N'"& name &"',News_Description = N'"& des &"',News_Content = N'"& content &"',News_Image = N'"& img &"',Cat_Id = "& paren &",News_Status = 0,News_EditBy = N'"& User_Acount &"',News_EditDate = GETDATE() WHERE News_Id = " & Id
+		sql = "UPDATE [dbo].[tblNews] SET Product_Name = N'"& name &"',Product_Description = N'"& des &"',Product_Component = N'"& component &"',Product_Content = N'"& content &"',Product_Image = N'"& img &"',Product_Price = N'"& price &"',Cat_Id = "& paren &",Product_EditBy = N'"& User_Acount &"',Product_Status = 0,Product_EditDate = GETDATE() WHERE News_Id = " & Id
 		
 		SqlQuery(sql)
 	End Function 

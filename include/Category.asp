@@ -48,4 +48,11 @@
 		
 		SET GetCategory = SqlQuery(sql)
 	End Function
+	
+	Function DeleteCategory(id)
+		dim sql
+		sql = "DELETE FROM [dbo].[tblCategory] WHERE Cat_Id = " & id
+		
+		SqlQuery(sql)
+	End Function
 %>

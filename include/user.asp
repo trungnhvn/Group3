@@ -13,6 +13,13 @@
 		SET GetAcctInfo = SqlQuery(sql)
 	End Function
 	
+	Function DeleteUser(acct)
+		dim sql,ret
+		sql = "DELETE FROM [dbo].[tblUser] WHERE User_Acount = N'"& acct &"'" 
+		
+		SqlQuery(sql)
+	End Function
+	
 	Function IsLogin()
 		IF session("username") <> "" THEN
 			SET ACCTINFO = GetAcctInfo(session("username"))

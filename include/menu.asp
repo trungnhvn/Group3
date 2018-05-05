@@ -69,6 +69,14 @@
 		SET GetMenu = SqlQuery(sql)
 	End Function
 	
+	Function DeleteMenu(id)
+		dim sql
+		sql = "DELETE FROM [dbo].[tblMenu] WHERE Menu_Id = " & id
+		
+		SqlQuery(sql)
+	End Function
+	
+	
 	Function GetMenuLink(iType,link)
 		IF StrComp(iType,"0") = 0 THEN 
 			GetMenuLink = link

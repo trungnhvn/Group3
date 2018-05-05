@@ -44,4 +44,12 @@
 		
 		SET GetPhoto = SqlQuery(sql)
 	End Function
+	
+	Function DeletePhoto(id)
+		dim sql
+		sql = "DELETE FROM [dbo].[tblPhoto] WHERE Photo_Id = " & id
+		
+		SqlQuery(sql)
+	End Function
+	
 %>

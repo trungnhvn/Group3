@@ -15,6 +15,13 @@
 		set GetNews = SqlQuery(sql)
 	End Function
 	
+	Function DeleteNews(id)
+		dim sql,ret
+		sql = "DELETE FROM [dbo].[tblNews] WHERE News_Id = " & id
+		
+		SqlQuery(sql)
+	End Function
+	
 	
 	Function CreateNews(name,paren,img,des,content)
 		Dim sql 

@@ -22,6 +22,8 @@
 		SqlQuery(sql)
 	End Function 
 	
+	
+	
 	Function UpdateContact(id,note,status)
 		Dim sql 
 		
@@ -39,6 +41,13 @@
 		sql = "SELECT * FROM [dbo].[tblContact] WHERE Contact_Id = " & id
 		
 		SET GetContact = SqlQuery(sql)
+	End Function
+	
+	Function DeleteContact(id)
+		dim sql
+		sql = "DELETE FROM [dbo].[tblContact] WHERE Contact_Id = " & id
+		
+		SqlQuery(sql)
 	End Function
 	
 	Function GetNameStatusContact(status)
