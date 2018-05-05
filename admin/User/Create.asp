@@ -67,7 +67,7 @@
 								</div>
 								<hr/>
 								<div class="form-group">
-									<label for="FullName">Tên đầy đủ</label>
+									<label for="FullName">Họ và tên</label>
 									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="FullName" name="FullName" type="text" value="<%= fullname %>">
 									<span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span>
 								</div>
@@ -92,7 +92,12 @@
 								
 								<div class="form-group">
 									<label for="Power">Chức vụ</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Power" name="Power" type="text" value="<%= power %>">
+									<select class="form-control" name="Power" id="Power">
+										<option value="admin" <%= SelectActive("admin",power) %>>Quản trị viên</option>
+										<option value="contentmanage" <%= SelectActive("contentmanage",power) %>>Quản lý nội dung</option>
+										<option value="newsmanage" <%= SelectActive("newsmanage",power) %>>Quản lý bài viết</option>
+										<option value="productmanage" <%= SelectActive("productmanage",power) %>>Quản lý sản phẩm</option>
+									</select>
 									<span class="field-validation-valid" data-valmsg-for="Power" data-valmsg-replace="true"></span>
 								</div>
 							</div>

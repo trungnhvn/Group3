@@ -13,21 +13,22 @@
 			fullname	= acc("User_fullname")
 			birthday	= acc("User_birthday")
 			sex			= acc("User_sex")
-			
+			IF sex THEN
+				sex = 1
+			ELSE 
+				sex = 0
+			END IF
 
 			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 				'Acount 		= Trim(request.form("Acount"))
-				email		= request.form("email")
-				fullname	= request.form("fullname")
-				birthday	= request.form("birthday")
-				sex			= request.form("sex")
+				email		= request.form("Email")
+				fullname	= request.form("Fullname")
+				birthday	= request.form("Birthday")
+				sex			= request.form("Sex")
 				
-				IF name = "" THEN 
-					errortxt = "Tên danh mục không được để trống!"
-				ELSE
-					'UpdateNews id,name,paren,Image,Description,Content
-					
-				END IF
+				UpdateUserInfo Acount,fullname,email,birthday,sex
+				
+				response.redirect "/Admin/User/ChangInfo.asp"
 			END IF
 		ELSE
 			response.redirect "/Admin/User.asp"
@@ -59,6 +60,12 @@
 								</div>
 								
 								<div class="form-group">
+									<label for="Fullname">Họ và tên</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Fullname" name="Fullname" type="text" value="<%= fullname %>">
+									<span class="field-validation-valid" data-valmsg-for="Fullname" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group">
 									<label for="Email">Email</label>
 									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Email" name="Email" type="text" value="<%= email %>">
 									<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
@@ -72,8 +79,11 @@
 								
 								<div class="form-group">
 									<label for="Sex">Giới tính</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Sex" name="Sex" type="text" value="<%= sex %>">
-									<span class="field-validation-valid" data-valmsg-for="MetaDesc" data-valmsg-replace="true"></span>
+									<select class="form-control" name="Sex" id="Sex">
+										<option value="0" <%= SelectActive("0",sex) %>>Nam</option>
+										<option value="1" <%= SelectActive("1",sex) %>>Nữ</option>
+									</select>
+									<span class="field-validation-valid" data-valmsg-for="Sex" data-valmsg-replace="true"></span>
 								</div>
 								
 							</div>

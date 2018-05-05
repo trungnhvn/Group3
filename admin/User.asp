@@ -58,9 +58,11 @@
 													<td><%= Table("User_fullname") %></td>
 													<td><%= Table("User_date") %></td>
 													<td>
+														<% IF StrComp(Table("User_Acount"),User_Acount) <> 0 THEN %>
 														<a href="/Admin/User/Del.asp?Acct=<%= Table("User_Acount") %>" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
+														<% END IF %>
 													</td>
 												</tr>
 											<%	

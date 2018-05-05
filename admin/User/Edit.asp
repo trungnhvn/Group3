@@ -16,21 +16,21 @@
 			sex			= acc("User_sex")
 			power		= acc("User_power")
 			
-
-			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
-				'Acount 		= Trim(request.form("Acount"))
-				email		= request.form("email")
-				fullname	= request.form("fullname")
-				birthday	= request.form("birthday")
-				sex			= request.form("sex")
-				power		= request.form("power")
-				
-				IF name = "" THEN 
-					errortxt = "Tên danh mục không được để trống!"
-				ELSE
-					'UpdateNews id,name,paren,Image,Description,Content
+			IF NOT StrComp(Acount,User_Acount) = 0 THEN
+				IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
+					'Acount 		= Trim(request.form("Acount"))
+					email		= request.form("Email")
+					fullname	= request.form("Fullname")
+					birthday	= request.form("Birthday")
+					sex			= request.form("Sex")
+					power		= request.form("Power")
 					
+
+					UpdateUser acct,fullname,email,birthday,sex,power
+						
 				END IF
+			ELSE
+				response.redirect "/Admin/User/ChangInfo.asp"
 			END IF
 		ELSE
 			response.redirect "/Admin/User.asp"
@@ -52,7 +52,7 @@
 				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
         
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/News/_NewsOption.asp" -->
+                    <!-- #include virtual ="/admin/User/_UserOption.asp" -->
 					<form method="POST" >
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -63,6 +63,12 @@
 								<div class="form-group">
 									<label>Tài khoản</label>
 									<input class="form-control" type="text" value="<%= Acount %>" readonly>
+								</div>
+								
+								<div class="form-group">
+									<label for="Fullname">Họ và tên</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Fullname" name="Fullname" type="text" value="<%= fullname %>">
+									<span class="field-validation-valid" data-valmsg-for="Fullname" data-valmsg-replace="true"></span>
 								</div>
 								
 								<div class="form-group">
@@ -79,13 +85,21 @@
 								
 								<div class="form-group">
 									<label for="Sex">Giới tính</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Sex" name="Sex" type="text" value="<%= sex %>">
-									<span class="field-validation-valid" data-valmsg-for="MetaDesc" data-valmsg-replace="true"></span>
+									<select class="form-control" name="Sex" id="Sex">
+										<option value="0" <%= SelectActive("0",power) %>>Nam</option>
+										<option value="1" <%= SelectActive("1",power) %>>Nữ</option>
+									</select>
+									<span class="field-validation-valid" data-valmsg-for="Sex" data-valmsg-replace="true"></span>
 								</div>
 								
 								<div class="form-group">
 									<label for="Power">Chức vụ</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-maxlength-max="80" id="Power" name="Power" type="text" value="<%= power %>">
+									<select class="form-control" name="Power" id="Power">
+										<option value="admin" <%= SelectActive("admin",power) %>>Quản trị viên</option>
+										<option value="contentmanage" <%= SelectActive("contentmanage",power) %>>Quản lý nội dung</option>
+										<option value="newsmanage" <%= SelectActive("newsmanage",power) %>>Quản lý bài viết</option>
+										<option value="productmanage" <%= SelectActive("productmanage",power) %>>Quản lý sản phẩm</option>
+									</select>
 									<span class="field-validation-valid" data-valmsg-for="Power" data-valmsg-replace="true"></span>
 								</div>
 							</div>
@@ -94,6 +108,7 @@
 
 					<div class="submit-holder">
 						<button type="submit" class="btn-mvc-green btn-mvc-large">Cập nhật</button>
+						<a href="NewPass.asp?Acct=<%= acct %>" class="btn-mvc-green btn-mvc-large">Mật khẩu mới</a>
 					</div>
 					
 					</form>
