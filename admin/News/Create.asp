@@ -1,6 +1,7 @@
 <%
 	page = "News"
 	title = "Đăng bài viết"
+	role = Array("Admin","ContentManage","NewsManage")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/news.asp" -->

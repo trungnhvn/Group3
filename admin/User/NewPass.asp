@@ -1,6 +1,7 @@
 <%
 	page = "User"
 	title = "Mật khẩu mới"
+	role = Array("Admin")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <%

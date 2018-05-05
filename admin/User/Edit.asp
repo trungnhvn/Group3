@@ -1,6 +1,7 @@
 <%
 	page = "User"
 	title = "Chỉnh sửa thông tin tài khoản"
+	role = Array("Admin")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <%
@@ -95,10 +96,11 @@
 								<div class="form-group">
 									<label for="Power">Chức vụ</label>
 									<select class="form-control" name="Power" id="Power">
-										<option value="admin" <%= SelectActive("admin",power) %>>Quản trị viên</option>
-										<option value="contentmanage" <%= SelectActive("contentmanage",power) %>>Quản lý nội dung</option>
-										<option value="newsmanage" <%= SelectActive("newsmanage",power) %>>Quản lý bài viết</option>
-										<option value="productmanage" <%= SelectActive("productmanage",power) %>>Quản lý sản phẩm</option>
+										<option value="Admin" <%= SelectActive("Admin",power) %>>Quản trị viên</option>
+										<option value="ContentManage" <%= SelectActive("ContentManage",power) %>>Quản lý nội dung</option>
+										<option value="NewsManage" <%= SelectActive("NewsManage",power) %>>Quản lý bài viết</option>
+										<option value="ProductManage" <%= SelectActive("ProductManage",power) %>>Quản lý sản phẩm</option>
+										<option value="ContactManage" <%= SelectActive("ContactManage",power) %>>Quản lý liên hệ</option>
 									</select>
 									<span class="field-validation-valid" data-valmsg-for="Power" data-valmsg-replace="true"></span>
 								</div>

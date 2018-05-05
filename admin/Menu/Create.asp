@@ -1,6 +1,7 @@
 <%
 	page = "Menu"
 	title = "Tạo menu"
+	role = Array("Admin","ContentManage")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Menu.asp" -->

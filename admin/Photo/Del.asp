@@ -1,6 +1,7 @@
 <%
 	page = "Photo"
 	title = "Xóa hình ảnh"
+	role = Array("Admin","ContentManage")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Photo.asp" -->

@@ -1,6 +1,7 @@
 <%
 	page = "Product"
 	title = "Chỉnh sửa thông tin sản phẩm"
+	role = Array("Admin","ContentManage","ProductManage")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <!-- #include virtual ="/include/Product.asp" -->

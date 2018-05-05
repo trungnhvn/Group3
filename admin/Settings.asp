@@ -1,6 +1,7 @@
 <%
 	page = "Setting"
 	title = "Setting"
+	role = Array("Admin","ContentManage")
 %>
 <!-- #include virtual ="/include/admin.asp" -->
 <%
