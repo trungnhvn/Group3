@@ -87,6 +87,17 @@
      <script src="/assets2/dropdown/js/script.min.js"></script>
      <script src="/assets2/touchswipe/jquery.touch-swipe.min.js"></script>
      <script src="/assets2/theme/js/script.js"></script>
+<<<<<<< HEAD
+     
+     <script src="assets/web/assets/jquery/jquery.min.js"></script>
+     <script src="assets/popper/popper.min.js"></script>
+     <script src="assets/tether/tether.min.js"></script>
+     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+     <script src="assets/smoothscroll/smooth-scroll.js"></script>
+     <script src="assets/dropdown/js/script.min.js"></script>
+     <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+     <script src="assets/theme/js/script.js"></script>
+=======
      <link rel="stylesheet" href="/assets3/web/assets/mobirise-icons/mobirise-icons.css">
      <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="/assets3/bootstrap/css/bootstrap-grid.min.css">
@@ -105,3 +116,4 @@
   <script src="/assets4/theme/js/script.js"></script>
   <script src="/assets4/formoid/formoid.min.js"></script>
   
+>>>>>>> 5ba6c1249c3d821e3c1ff8bec938dc5bdbba026f
