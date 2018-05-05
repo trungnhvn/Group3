@@ -101,7 +101,7 @@
 	Function CreateAccount(acct,pass,email,fullname,birthday,sex,power)
 		Dim sql
 		sql = "INSERT INTO [dbo].[tblUser](User_Acount,User_pass,User_email,User_fullname,User_birthday,User_sex,User_power,User_date)" & _
-			  " VALUES(N'"& acct &"',N'"& pass&"',N'"& email &"',N'"& fullname &"',N'"& birthday &"',N'"& sex &"',N'"& power &"',GETDATE())"
+			  " VALUES(N'"& acct &"',N'"& pass&"',N'"& email &"',N'"& fullname &"',N'"& birthday &"',"& sex &",N'"& power &"',GETDATE())"
 		
 		SqlQuery(sql)
 	End Function
@@ -114,7 +114,19 @@
 		SqlQuery(sql)
 	End Function
 	
+	Function UpdateUser(acct,fullname,email,birthday,sex,power)
+		Dim sql
+		sql = "UPDATE [dbo].[tblUser] SET User_email = N'"& email &"',User_fullname = N'"& fullname &"',User_birthday = N'"& birthday &"',User_sex = "& sex &",User_power = N'"& power &"' WHERE User_Acount = N'"& acct &"'"
+		
+		SqlQuery(sql)
+	End Function
 	
+	Function UpdateUserInfo(acct,fullname,email,birthday,sex)
+		Dim sql
+		sql = "UPDATE [dbo].[tblUser] SET User_email = N'"& email &"',User_fullname = N'"& fullname &"',User_birthday = N'"& birthday &"',User_sex = "& sex &" WHERE User_Acount = N'"& acct &"'"
+		
+		SqlQuery(sql)
+	End Function
 	
 	
 	
