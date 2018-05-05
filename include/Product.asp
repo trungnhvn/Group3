@@ -8,18 +8,18 @@
 		SET GetListProduct = SqlQuery(sql)
 	End Function
 
-	Function GetNews(id)
+	Function GetProduct(id)
 		dim sql,ret
-		sql = "SELECT * FROM [dbo].[tblNews] WHERE News_Id = " & id
+		sql = "SELECT * FROM [dbo].[tblProduct] WHERE Product_Id = " & id
 		
-		set GetNews = SqlQuery(sql)
+		set GetProduct = SqlQuery(sql)
 	End Function
 	
 	
-	Function CreateNews(name,paren,img,des,content)
+	Function CreateProduct(name,paren,img,price,component,des,content)
 		Dim sql 
-		sql = "INSERT INTO [dbo].[tblNews](News_Title,News_Description,News_Content,News_Image,Cat_Id,User_Acount,News_Status,News_Date,News_EditDate)" & _
-			  " VALUES(N'"& name &"',N'"& des &"',N'"& content &"',N'"& img &"',"& paren &",N'"& User_Acount &"',0,GETDATE(),GETDATE())"
+		sql = "INSERT INTO [dbo].[tblProduct](Product_Name,Product_Description,Product_Component,Product_Content,Product_Image,Product_Price,Cat_Id,User_Acount,Product_Status,Product_EditDate,Product_Date)" & _
+			  " VALUES(N'"& name &"',N'"& des &"',N'"& component &"',N'"& content &"',N'"& img &"',N'"& price &"',"& paren &",N'"& User_Acount &"',0,GETDATE(),GETDATE())"
 		
 		SqlQuery(sql)
 	End Function 
