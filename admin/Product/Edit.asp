@@ -1,26 +1,30 @@
 <%
-	page = "News"
-	title = "Chỉnh sửa bài viết"
+	page = "Product"
+	title = "Chỉnh sửa thông tin sản phẩm"
 %>
 <!-- #include virtual ="/include/admin.asp" -->
-<!-- #include virtual ="/include/news.asp" -->
+<!-- #include virtual ="/include/Product.asp" -->
 <!-- #include virtual ="/include/Category.asp" -->
 <%
 	id = request.querystring("Id")
 	IF id <> "" THEN
-		Set news = GetNews(id)
-		IF NOT news.EOF THEN
+		Set product = GetProduct(id)
+		IF NOT product.EOF THEN
 			
-			name= news("News_Title")
-			paren= news("Cat_Id")
-			Description= news("News_Description")
-			Content= news("News_Content")
-			Image= news("News_Image")
+			name=product("Product_Name")
+			paren=product("Cat_Id")
+			Price=product("Product_Price")
+			Component=product("Product_Component")
+			Description=product("Product_Description")
+			Content=product("Product_Content")
+			Image=product("Product_Image")
 			
 
 			IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 				name=Trim(request.form("Title"))
 				paren=request.form("Paren")
+				Price=request.form("Price")
+				Component=request.form("Component")
 				Description=Trim(request.form("Description"))
 				Content=request.form("Content")
 				Image=Trim(request.form("Image"))
@@ -28,15 +32,16 @@
 				IF name = "" THEN 
 					errortxt = "Tên danh mục không được để trống!"
 				ELSE
-					UpdateNews id,name,paren,Image,Description,Content
+					CreateProduct name,paren,Image,Price,Component,Description,Content
 					
+					response.redirect "/Admin/Product.asp"
 				END IF
 			END IF
 		ELSE
-			response.redirect "/Admin/Category.asp"
+			response.redirect "/Admin/Product.asp"
 		END IF
 	ELSE
-		response.redirect "/Admin/Category.asp"
+		response.redirect "/Admin/Product.asp"
 	END IF
 	
 	
@@ -52,7 +57,7 @@
 				<!-- #include virtual ="/admin/Control/GenericMessage.asp" -->
         
                 <div class="mainadminbody" style="min-height:100%;">
-                    <!-- #include virtual ="/admin/News/_NewsOption.asp" -->
+                    <!-- #include virtual ="/admin/Product/_ProductOption.asp" -->
 					<form method="POST" >
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -61,7 +66,7 @@
 						<div class="panel-collapse">
 							<div class="panel-body">
 								<div class="form-group">
-									<label for="Title">Tiêu đề(*)</label>
+									<label for="Title">Tên sản phẩm(*)</label>
 									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" id="Title" name="Title" type="text" value="<%= name %>">
 									<span class="field-validation-valid" data-valmsg-for="Title" data-valmsg-replace="true"></span>
 								</div>
@@ -93,6 +98,18 @@
 									    <button style="width:90px;float:left;margin-left:10px;height:34px" type="button" onclick="selectFileWithCKFinder('Image')">Chọn ảnh</button>
                                     </div>
                                     <span class="field-validation-valid" data-valmsg-for="Image" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group">
+									<label for="Price">Giá sản phẩm</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="100" id="Price" name="Price" type="text" value="<%= Price %>">
+									<span class="field-validation-valid" data-valmsg-for="Price" data-valmsg-replace="true"></span>
+								</div>
+								
+								<div class="form-group">
+									<label for="Component">Thành phần</label>
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="100" id="Component" name="Component" type="text" value="<%= Component %>">
+									<span class="field-validation-valid" data-valmsg-for="Component" data-valmsg-replace="true"></span>
 								</div>
 								
 								<div class="form-group">
