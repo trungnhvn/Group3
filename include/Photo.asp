@@ -12,6 +12,19 @@
 		
 		SET GetListPhoto = SqlQuery(sql)
 	End Function 
+	
+	Function GetCountPhoto()
+		Dim sql,ret 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblPhoto]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountPhoto = 0
+		ELSE
+			GetCountPhoto = ret("countline")
+		END IF
+	End Function 
 
 	Function CreatePhoto(name,Image,Paren,Description,link,ShotOder)
 		Dim sql

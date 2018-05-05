@@ -7,6 +7,19 @@
 		
 		SET GetListProduct = SqlQuery(sql)
 	End Function
+	
+	Function GetCountProduct()
+		Dim sql,ret 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblProduct]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountProduct = 0
+		ELSE
+			GetCountProduct = ret("countline")
+		END IF
+	End Function 
 
 	Function GetProduct(id)
 		dim sql,ret

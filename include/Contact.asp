@@ -12,6 +12,19 @@
 		
 		SET GetListContact = SqlQuery(sql)
 	End Function 
+	
+	Function GetCountContact()
+		Dim sql,ret 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblContact]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountContact = 0
+		ELSE
+			GetCountContact = ret("countline")
+		END IF
+	End Function 
 
 	Function CreateContact(name,phone,email,Description)
 		Dim sql

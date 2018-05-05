@@ -29,7 +29,19 @@
 		END IF
 	End Function
 
-
+	Function GetMaxPage(count1,limit)
+		dim maxpage
+		maxpage = cint(count1 / limit)
+		IF count > limit*maxpage THEN 
+			maxpage = maxpage + 1
+		END IF
+		
+		IF maxpage = 0 THEN 
+			maxpage = 1
+		END IF
+		
+		GetMaxPage = maxpage
+	End Function
 
 %>
 

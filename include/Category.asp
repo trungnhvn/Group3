@@ -12,6 +12,20 @@
 		
 		SET GetListCategory = SqlQuery(sql)
 	End Function 
+	
+	Function GetCountCategory()
+		Dim sql,rownum 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblCategory]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountCategory = 0
+		ELSE
+			GetCountCategory = ret("countline")
+		END IF
+	End Function 
+
 
 	Function GetAllCategory()
 		Dim sql

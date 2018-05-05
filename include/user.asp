@@ -85,6 +85,19 @@
 		SET GetListUser = SqlQuery(sql)
 	End Function 
 	
+	Function GetCountUser()
+		Dim sql,ret 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblUser]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountUser = 0
+		ELSE
+			GetCountUser = ret("countline")
+		END IF
+	End Function 
+	
 	Function CreateAccount(acct,pass,email,fullname,birthday,sex,power)
 		Dim sql
 		sql = "INSERT INTO [dbo].[tblUser](User_Acount,User_pass,User_email,User_fullname,User_birthday,User_sex,User_power,User_date)" & _

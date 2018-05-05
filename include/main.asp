@@ -1,11 +1,11 @@
 <!-- #include virtual ="/include/function.asp" -->
 <%
 	IF page = "" THEN
-		Response.redirect("/index.asp")
+		Response.redirect("/home.asp")
 	End if
 
 
-
+	pagenum = request.querystring("page")
 
 
 

@@ -7,6 +7,19 @@
 		
 		SET GetListNews = SqlQuery(sql)
 	End Function
+	
+	Function GetCountNews()
+		Dim sql,ret 
+		
+		sql = "SELECT COUNT(*) AS countline FROM [dbo].[tblNews]" 
+		
+		set ret = SqlQuery(sql)
+		IF ret.EOF THEN
+			GetCountNews = 0
+		ELSE
+			GetCountNews = ret("countline")
+		END IF
+	End Function 
 
 	Function GetNews(id)
 		dim sql,ret
