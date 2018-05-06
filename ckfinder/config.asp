@@ -64,7 +64,7 @@ Dim baseUrl, baseDir
 '
 'ATTENTION: The trailing slash is required.
 
-'baseUrl = "/images/product/"
+baseUrl = "/images/"
 'baseUrl = "http://localhost/shopquanao/images/product/"
 
 'baseDir : the path to the local directory (in the server) which points to the
@@ -80,8 +80,8 @@ Dim baseUrl, baseDir
 '
 'ATTENTION: The trailing slash is required.
 
-baseDir = "C:\project\"
-'baseDir = server.MapPath(baseUrl) & "\"
+'baseDir = "C:\project\"
+baseDir = server.MapPath(baseUrl) & "\"
 
 '
 ' ### Advanced Settings

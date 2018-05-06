@@ -4,14 +4,20 @@
 %>
 <!-- #include virtual ="/include/main.asp" -->
 <%
-	IF IsLogin() THEN 
-		response.redirect "Dashboard.asp"
+	url = request.querystring("url")
+	IF url = "" THEN
+		url = "Dashboard.asp"
 	END IF
 
+	IF IsLogin() THEN 
+		response.redirect url
+	END IF
+	
 	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
 		username=Trim(request.form("username"))
 		password=Trim(request.form("password"))
-		
+		url=Trim(request.form("url"))
+
 		IF username = "" THEN 
 			errortxt = "Tài khoản không được để trống!"
 		ELSE
@@ -19,7 +25,8 @@
 				errortxt = "Mật khẩu không được để trống!"
 			ELSE
 				IF Login(username,password) THEN 
-					response.redirect "Dashboard.asp"
+					
+					response.redirect url
 				ELSE
 					errortxt = "Tài khoản hoặc mật khẩu không đúng!"
 				END IF
@@ -79,11 +86,11 @@
 							<div class="cols-sm-10">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-									<input type="password" class="form-control" name="password" id="password" value="<%= password %>" placeholder="Nhập mật khẩu"/>
+									<input type="password" class="form-control" name="password" id="password" placeholder="Nhập mật khẩu"/>
 								</div>
 							</div>
 						</div>
-
+						<input type="hidden" name="url" id="url" value="<%= url %>" />
 						<div class="form-group ">
 							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Đăng nhập</button>
 						</div>

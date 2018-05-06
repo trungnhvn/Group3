@@ -22,14 +22,18 @@
 	End Function 
 
 	Function GetNews(id)
-		dim sql,ret
+		dim sql
+		id = cint(id)
+		
 		sql = "SELECT * FROM [dbo].[tblNews] WHERE News_Id = " & id
 		
 		set GetNews = SqlQuery(sql)
 	End Function
 	
 	Function DeleteNews(id)
-		dim sql,ret
+		dim sql
+		id = cint(id)
+		
 		sql = "DELETE FROM [dbo].[tblNews] WHERE News_Id = " & id
 		
 		SqlQuery(sql)
@@ -38,6 +42,13 @@
 	
 	Function CreateNews(name,paren,img,des,content)
 		Dim sql 
+		name = ValueEncode(name)
+		content = ValueEncode(content)
+		des = ValueEncode(des)
+		img = ValueEncode(img)
+		paren = cint(paren)
+		
+		
 		sql = "INSERT INTO [dbo].[tblNews](News_Title,News_Description,News_Content,News_Image,Cat_Id,User_Acount,News_Status,News_Date,News_EditDate)" & _
 			  " VALUES(N'"& name &"',N'"& des &"',N'"& content &"',N'"& img &"',"& paren &",N'"& User_Acount &"',0,GETDATE(),GETDATE())"
 		
@@ -46,6 +57,14 @@
 	
 	Function UpdateNews(Id,name,paren,img,des,content)
 		Dim sql 
+		name = ValueEncode(name)
+		content = ValueEncode(content)
+		des = ValueEncode(des)
+		img = ValueEncode(img)
+		paren = cint(paren)
+		Id = cint(Id)
+		
+		
 		sql = "UPDATE [dbo].[tblNews] SET News_Title = N'"& name &"',News_Description = N'"& des &"',News_Content = N'"& content &"',News_Image = N'"& img &"',Cat_Id = "& paren &",News_Status = 0,News_EditBy = N'"& User_Acount &"',News_EditDate = GETDATE() WHERE News_Id = " & Id
 		
 		SqlQuery(sql)

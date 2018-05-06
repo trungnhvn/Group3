@@ -5,9 +5,9 @@
 %>
 <%	
 	dbHost = "127.0.0.1"
-	dbName = "DoAnky_1"
+	dbName = "DOAN1"
 	dbUser = "sa"
-	dbPass = "871997"
+	dbPass = "1234567"
 	
 	dbConnectStr = "Provider=SQLOLEDB.1;Data Source=" & dbHost & ";Initial Catalog=" & dbName & ";user id = '" & dbUser & "';password='" & dbPass & "'"
 
@@ -22,4 +22,10 @@
 
 		Set SqlQuery = Adrec
 	END Function
+	
+	Function ValueEncode(value)
+		value = Replace(value,"'","''")
+		
+		ValueEncode = value
+	End Function
 %>

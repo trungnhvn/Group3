@@ -1,5 +1,4 @@
 ﻿<%@ codepage="65001" language="VBScript" %>
-<% Option Explicit %>
 <%
 ' CKFinder
 ' ========
@@ -11,6 +10,11 @@
 ' modifying or distribute this file or part of its contents. The contents of
 ' this file is part of the Source Code of CKFinder.
 %>
+<%
+	page = "ckfinder"
+%>
+<!-- #INCLUDE virtual="/include/admin.asp" -->
+
 <!-- #INCLUDE file="core/factory.asp" -->
 <!-- #INCLUDE file="core/AccessControlConfig.asp" -->
 <!-- #INCLUDE file="core/folderHandler.asp" -->
@@ -54,7 +58,7 @@
 <!-- #INCLUDE file="utils/xmlNode.asp" -->
 <!-- #INCLUDE file="utils/Translator.asp" -->
 
-<!-- #INCLUDE file="../../../config.asp" -->
+<!-- #include virtual="/ckfinder/config.asp" -->
 <script runat="server" language="VBScript">
 Dim sCommand
 sCommand = request.queryString("command")

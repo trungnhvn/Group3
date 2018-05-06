@@ -20,6 +20,8 @@
 	
 	Function GetListSubMenu(paren)
 		Dim sql
+		paren = cint(paren)
+		
 		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Paren = "& paren &" ORDER BY [ShotOder] DESC"
 		
 		SET GetListSubMenu = SqlQuery(sql)
@@ -35,12 +37,12 @@
 	Function CreateMenu(name,paren,itype,link,shotoder)
 		Dim sql
 		
-		IF paren = "" THEN
-			paren = 0
-		END IF
-		IF shotoder = "" THEN
-			shotoder = 0
-		END IF
+		paren = cint(paren)
+		shotoder = cint(shotoder)
+		itype = cint(itype)
+		name = ValueEncode(name)
+		link = ValueEncode(link)
+		
 		
 		sql = "INSERT INTO [dbo].[tblMenu](Menu_Name,Menu_Paren,Menu_Type,Menu_Link,ShotOder)" & _
 			  " VALUES(N'"& name &"',"& paren &","& itype &",N'"& link &"',"& shotoder &")"
@@ -50,12 +52,13 @@
 	
 	Function UpdateMenu(id,name,paren,itype,link,shotoder)
 		Dim sql 
-		IF paren = "" THEN
-			paren = 0
-		END IF
-		IF shotoder = "" THEN
-			shotoder = 0
-		END IF
+		
+		id = cint(id)
+		paren = cint(paren)
+		shotoder = cint(shotoder)
+		itype = cint(itype)
+		name = ValueEncode(name)
+		link = ValueEncode(link)
 		
 		sql = "UPDATE [dbo].[tblMenu] SET Menu_Name = N'"& name &"',Menu_Paren = "& paren &",Menu_Type = "& itype &", Menu_Link = N'"& link &"',ShotOder = "& shotoder &" WHERE Menu_Id = " & id
 		
@@ -64,6 +67,8 @@
 	
 	Function GetMenu(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Id = " & id
 		
 		SET GetMenu = SqlQuery(sql)
@@ -71,6 +76,8 @@
 	
 	Function DeleteMenu(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "DELETE FROM [dbo].[tblMenu] WHERE Menu_Id = " & id
 		
 		SqlQuery(sql)

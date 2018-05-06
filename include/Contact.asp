@@ -29,6 +29,11 @@
 	Function CreateContact(name,phone,email,Description)
 		Dim sql
 		
+		name = ValueEncode(name)
+		phone = ValueEncode(phone)
+		email = ValueEncode(email)
+		Description = ValueEncode(Description)
+		
 		sql = "INSERT INTO [dbo].[tblContact](Contact_Name,Contact_Phone,Contact_Email,Contact_Description,Contact_Status,Contact_Date)" & _
 			  " VALUES(N'"& name &"',N'"& phone &"',N'"& email &"',N'"& Description &"',0,GETDATE())"
 		
@@ -40,9 +45,9 @@
 	Function UpdateContact(id,note,status)
 		Dim sql 
 		
-		IF status = "" THEN 
-			status = 0
-		END IF
+		id = cint(id)
+		note = ValueEncode(note)
+		status = cint(status)
 		
 		sql = "UPDATE [dbo].[tblContact] SET Contact_Note = N'"& note &"',Contact_Status = "& status &" WHERE Contact_Id = " & id
 		
@@ -51,6 +56,8 @@
 	
 	Function GetContact(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "SELECT * FROM [dbo].[tblContact] WHERE Contact_Id = " & id
 		
 		SET GetContact = SqlQuery(sql)
@@ -58,6 +65,8 @@
 	
 	Function DeleteContact(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "DELETE FROM [dbo].[tblContact] WHERE Contact_Id = " & id
 		
 		SqlQuery(sql)

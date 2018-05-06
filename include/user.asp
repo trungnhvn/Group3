@@ -8,6 +8,8 @@
 	
 	Function GetAcctInfo(acct)
 		dim sql,ret
+		acct = ValueEncode(acct)
+		
 		sql = "SELECT * FROM [dbo].[tblUser] WHERE User_Acount = N'"& acct &"'" 
 		
 		SET GetAcctInfo = SqlQuery(sql)
@@ -15,6 +17,8 @@
 	
 	Function DeleteUser(acct)
 		dim sql,ret
+		acct = ValueEncode(acct)
+		
 		sql = "DELETE FROM [dbo].[tblUser] WHERE User_Acount = N'"& acct &"'" 
 		
 		SqlQuery(sql)
@@ -100,6 +104,15 @@
 	
 	Function CreateAccount(acct,pass,email,fullname,birthday,sex,power)
 		Dim sql
+		acct = ValueEncode(acct)
+		pass = ValueEncode(pass)
+		email = ValueEncode(email)
+		fullname = ValueEncode(fullname)
+		sex = ValueEncode(sex)
+		power = ValueEncode(power)
+		birthday = Cdate(birthday)
+		
+		
 		sql = "INSERT INTO [dbo].[tblUser](User_Acount,User_pass,User_email,User_fullname,User_birthday,User_sex,User_power,User_date)" & _
 			  " VALUES(N'"& acct &"',N'"& pass&"',N'"& email &"',N'"& fullname &"',N'"& birthday &"',"& sex &",N'"& power &"',GETDATE())"
 		
@@ -109,6 +122,10 @@
 	
 	Function ChangePass(acct,pass,newpass)
 		Dim sql
+		acct = ValueEncode(acct)
+		pass = ValueEncode(pass)
+		newpass = ValueEncode(newpass)
+		
 		sql = "UPDATE [dbo].[tblUser] SET User_pass = N'"& newpass &"' WHERE User_Acount = N'"& acct &"' AND User_pass = N'"& pass &"'"
 		
 		SqlQuery(sql)
@@ -116,6 +133,9 @@
 	
 	Function NewPass(acct,pass)
 		Dim sql
+		acct = ValueEncode(acct)
+		pass = ValueEncode(pass)
+		
 		sql = "UPDATE [dbo].[tblUser] SET User_pass = N'"& pass &"' WHERE User_Acount = N'"& acct &"'"
 		
 		SqlQuery(sql)
@@ -123,6 +143,13 @@
 	
 	Function UpdateUser(acct,fullname,email,birthday,sex,power)
 		Dim sql
+		acct = ValueEncode(acct)
+		email = ValueEncode(email)
+		fullname = ValueEncode(fullname)
+		sex = ValueEncode(sex)
+		power = ValueEncode(power)
+		birthday = Cdate(birthday)
+		
 		sql = "UPDATE [dbo].[tblUser] SET User_email = N'"& email &"',User_fullname = N'"& fullname &"',User_birthday = N'"& birthday &"',User_sex = "& sex &",User_power = N'"& power &"' WHERE User_Acount = N'"& acct &"'"
 		
 		SqlQuery(sql)
@@ -130,6 +157,12 @@
 	
 	Function UpdateUserInfo(acct,fullname,email,birthday,sex)
 		Dim sql
+		acct = ValueEncode(acct)
+		email = ValueEncode(email)
+		fullname = ValueEncode(fullname)
+		sex = ValueEncode(sex)
+		birthday = Cdate(birthday)
+		
 		sql = "UPDATE [dbo].[tblUser] SET User_email = N'"& email &"',User_fullname = N'"& fullname &"',User_birthday = N'"& birthday &"',User_sex = "& sex &" WHERE User_Acount = N'"& acct &"'"
 		
 		SqlQuery(sql)

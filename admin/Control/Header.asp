@@ -35,23 +35,15 @@
 
     <script>
         function selectFileWithCKFinder( elementId ) {
-            CKFinder.popup( {
-                chooseFiles: true,
-                width: 800,
-                height: 600,
-                onInit: function( finder ) {
-                    finder.on( 'files:choose', function( evt ) {
-		                var file = evt.data.files.first();
-				        var output = document.getElementById( elementId );
-				        output.value = file.getUrl();
-		            } );
-
-			        finder.on( 'file:choose:resizedImage', function( evt ) {
-			            var output = document.getElementById( elementId );
-				        output.value = evt.data.resizedUrl;
-			        } );
-		        }
-	        } );
+			
+            var finder = new CKFinder();
+			finder.basePath = '/ckfinder/';	// The path for the installation of CKFinder (default = "/ckfinder/").
+			finder.startupPath = 'Images:/';
+			finder.selectActionFunction = function(file){
+				var element = document.getElementById( elementId )
+				element.value = file;
+			};
+			finder.popup();
         }
     </script>
 </head>

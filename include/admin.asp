@@ -1,7 +1,16 @@
 <!-- #include virtual ="/include/main.asp" -->
 <% 
 	IF NOT IsLogin() THEN 
-		response.redirect "/admin/Login.asp"
+		Dim domainName, urlParam
+		domainName = Request.ServerVariables("SERVER_NAME") 
+		urlParam   = Request.ServerVariables("SCRIPT_NAME")
+		queryString   = Request.ServerVariables("QUERY_STRING")
+		
+		IF queryString <> "" THEN
+			queryString = "?" & queryString
+		END IF
+
+		response.redirect "/admin/Login.asp?url=" & Server.URLEncode(urlParam&queryString)
 	END IF
 	
 	IF StrComp("Admin",User_power) <> 0 THEN

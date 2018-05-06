@@ -42,7 +42,13 @@
 	End Function 
 	
 	Function CreateCategory(name,paren,note)
-		Dim sql 
+		Dim sql
+		
+		name = ValueEncode(name)
+		note = ValueEncode(note)
+		paren = cint(paren)
+		
+		
 		sql = "INSERT INTO [dbo].[tblCategory](Cat_Name,Cat_Note,Cat_Paren,User_Acount,Cat_date)" & _
 			  " VALUES(N'"& name &"',N'"& note &"',"& paren &",N'"& User_Acount &"',GETDATE())"
 		
@@ -51,6 +57,13 @@
 	
 	Function UpdateCategory(id,name,paren,note)
 		Dim sql 
+		
+		
+		note = ValueEncode(note)
+		name = ValueEncode(name)
+		paren = cint(paren)
+		id = cint(id)
+		
 		sql = "UPDATE [dbo].[tblCategory] SET Cat_Name = N'"& name &"',Cat_Note = N'"& note &"',Cat_Paren = "& paren &" WHERE Cat_Id = " & id
 		
 		SqlQuery(sql)
@@ -58,6 +71,8 @@
 	
 	Function GetCategory(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "SELECT * FROM [dbo].[tblCategory] WHERE Cat_Id = " & id
 		
 		SET GetCategory = SqlQuery(sql)
@@ -65,6 +80,8 @@
 	
 	Function DeleteCategory(id)
 		dim sql
+		id = cint(id)
+		
 		sql = "DELETE FROM [dbo].[tblCategory] WHERE Cat_Id = " & id
 		
 		SqlQuery(sql)

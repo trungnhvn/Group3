@@ -8,22 +8,34 @@
 		
 		IF maxpage > 1 THEN
 		
+		dim url
+		url = "?"
+		
+		FOR EACH item IN request.querystring
+			IF StrComp(item,"page") <> 0 THEN
+				url = url & item & "=" & Server.URLEncode(request.querystring(item)) & "&"
+			END IF
+		NEXT
+		
 		Sub OutPageNum(i)
 			dim str
 			IF i = pagenum THEN
-				str = "<li class='active'><a href='?page="& i &"'>"& i &"</a></li>"
+				str = "<li class='active'><a href='"& url &"page="& i &"'>"& i &"</a></li>"
 			ELSE 
-				str = "<li><a href='?page="& i &"'>"& i &"</a></li>"
+				str = "<li><a href='"& url &"page="& i &"'>"& i &"</a></li>"
 			END IF
 			response.write(str)
 		END Sub
+		
+		
+		
 		
 %>
 <div style="width:100%;text-align: right;display:table">
 	<ul class="pagination">
 		<%
 			IF pagenum > 1 THEN
-				response.write("<li><a href='?page="& (pagenum-1) &"'><<</a></li>")
+				response.write("<li><a href='"& url &"page="& (pagenum-1) &"'><<</a></li>")
 				OutPageNum(1)
 			END IF
 			
@@ -45,7 +57,7 @@
 			
 			IF pagenum < maxpage THEN 
 				OutPageNum(maxpage)
-				response.write("<li><a href='?page="& (pagenum+1) &"'>>></a></li>")
+				response.write("<li><a href='"& url &"page="& (pagenum+1) &"'>>></a></li>")
 			END IF
 		%>
 	</ul>
