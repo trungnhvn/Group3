@@ -1,7 +1,7 @@
 
 <%
    page = "product_details"
-   title = "Cho tiết SP"
+   title = "Chi tiết SP"
 %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->

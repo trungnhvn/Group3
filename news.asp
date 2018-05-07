@@ -1,17 +1,26 @@
 <%
    page = "news"
    title = "Tin Tức"
-%>
+   %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
-
+<%
+   limit = 20
+   count = GetCountNews()
+   
+   maxpage = cint(GetMaxPage(count,limit))
+   IF cint(pagenum) > maxpage THEN
+      pagenum = maxpage
+   END IF
+   
+   %>
 <!DOCTYPE html>
 <html amp>
    <head>
       <!-- #include virtual ="/Control/Head.asp" -->
    </head>
    <body>
-     <!-- #include virtual ="/Control/Menu.asp" -->
+      <!-- #include virtual ="/Control/Menu.asp" -->
       <section class="image1 cid-qPh08WzYmX" id="image2-1">
          <div>
             <div class="image-block">
@@ -87,6 +96,12 @@
             </div>
          </div>
       </section>
-<!-- #include virtual ="/Control/Footer.asp" -->
+      <% 
+         Table.movenext
+         loop
+         Table.close()
+         set Table = nothing
+         %>
+      <!-- #include virtual ="/Control/Footer.asp" -->
    </body>
 </html>

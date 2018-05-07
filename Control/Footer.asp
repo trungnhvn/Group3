@@ -4,16 +4,16 @@
                <div class="row row-links">
                   <ul class="foot-menu">
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="home.asp" target="_blank">Trang Chủ</a>
+                        <a class="text-white mbr-bold" href="home.asp" target="_blank">Home</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="news.asp" target="_blank">Tin Tức</a>
+                        <a class="text-white mbr-bold" href="news.asp" target="_blank">News</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="product.asp" target="_blank">Sản Phẩm</a>
+                        <a class="text-white mbr-bold" href="product.asp" target="_blank">Product</a>
                      </li>
                      <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="contact.asp" target="_blank">Liên Hệ</a>
+                        <a class="text-white mbr-bold" href="contact.asp" target="_blank">Contact</a>
                      </li>
                   </ul>
                </div>
