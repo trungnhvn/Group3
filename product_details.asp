@@ -47,7 +47,7 @@
  
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-4">Cappuccino là một biến cải của caffe latte (cà phê sữa). Thoạt tiên, cappuccino được pha với sô cô la nóng và đặc cùng kem tươi. Sau 1820, bột sô cô la được sáng chế nên được thêm vào dưới dạng những mảnh nhỏ trên kem tươi. Ba thể loại cà phê, sô cô la nóng, và bọt kem tươi tạo ra màu áo nâu của dòng tu phanxicô với những mảnh sô cô la phủ trên kem tươi thành hình chóp</div>
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-4" style="font-family: arial">Cappuccino là một biến cải của caffe latte (cà phê sữa). Thoạt tiên, cappuccino được pha với sô cô la nóng và đặc cùng kem tươi. Sau 1820, bột sô cô la được sáng chế nên được thêm vào dưới dạng những mảnh nhỏ trên kem tươi. Ba thể loại cà phê, sô cô la nóng, và bọt kem tươi tạo ra màu áo nâu của dòng tu phanxicô với những mảnh sô cô la phủ trên kem tươi thành hình chóp</div>
         </div>
     </div>
 </section>

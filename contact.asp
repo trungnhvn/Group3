@@ -9,8 +9,9 @@
 <!DOCTYPE html>
 <html >
 <head>
+    <!-- #include virtual ="/Control/Head.asp" -->
+<link rel="stylesheet" href="font-awsome/css/fontawesome-all.min.css">
 
-<!-- #include virtual ="/Control/Head.asp" -->
 </head>
 <body>
  <!-- #include virtual ="/Control/Menu.asp" -->
@@ -34,11 +35,12 @@
     <div class="container">
         <div class="media-container-row">
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-5">
-                <ul>
-                    <li><strong>Cửa hàng THE Coffee</strong></li>
-                    <li><em>Địa chỉ: Thành phố Vinh - Tỉnh Nghệ An</em></li>
-                    <li><em>Email: thecoffee@gmail.com</em></li><li><em>SĐT: (+84)2383.123456</em></li>
-                </ul>
+                <div class="row" style="display: grid;">
+                    <div><i class="fas fa-check-circle"></i><strong>Cửa hàng THE Coffee</strong></div>
+                    <div><i class="fas fa-check-circle"></i><em>Địa chỉ: Thành phố Vinh - Tỉnh Nghệ An</em></div>
+                    <div><i class="fas fa-check-circle"></i><em>Email: thecoffee@gmail.com</em></div>
+                    <div><i class="fas fa-check-circle"></i><em>SĐT: (+84)2383.123456</em></div>
+                </div>
             </div>
         </div>
     </div>
