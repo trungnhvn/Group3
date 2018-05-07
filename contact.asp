@@ -36,10 +36,10 @@
         <div class="media-container-row">
             <div class="mbr-text counter-container col-12 col-md-8 mbr-fonts-style display-5">
                 <div class="row" style="display: grid;">
-                    <div><i class="fas fa-check-circle"></i><strong>Cửa hàng THE Coffee</strong></div>
-                    <div><i class="fas fa-check-circle"></i><em>Địa chỉ: Thành phố Vinh - Tỉnh Nghệ An</em></div>
-                    <div><i class="fas fa-check-circle"></i><em>Email: thecoffee@gmail.com</em></div>
-                    <div><i class="fas fa-check-circle"></i><em>SĐT: (+84)2383.123456</em></div>
+                    <div><i class="far fa-check-circle"></i><strong>Cửa hàng THE Coffee</strong></div>
+                    <div><i class="far fa-check-circle"></i><em>Địa chỉ: Thành phố Vinh - Tỉnh Nghệ An</em></div>
+                    <div><i class="far fa-check-circle"></i><em>Email: thecoffee@gmail.com</em></div>
+                    <div><i class="far fa-check-circle"></i><em>SĐT: (+84)2383.123456</em></div>
                 </div>
             </div>
         </div>
