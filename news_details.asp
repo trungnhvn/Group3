@@ -1,87 +1,19 @@
 <!DOCTYPE html>
 <html >
 <head>
-  <!-- Site made with Mobirise Website Builder v4.7.1, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v4.7.1, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo2.png" type="image/x-icon">
-  <meta name="description" content="">
-  <title>Home</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
-  <link rel="stylesheet" href="assets/tether/tether.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/socicon/css/styles.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+<!-- #include virtual ="/Control/Head.asp" -->
   
   
   
 </head>
 <body>
-  <section class="menu cid-qQQy2Xx1Jd" once="menu" id="menu1-0">
+     <!-- #include virtual ="/Control/Menu.asp" -->
 
-    
 
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </button>
-        <div class="menu-logo">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://mobirise.com">
-                         <img src="assets/images/logo2.png" alt="Mobirise" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-white display-4" href="https://mobirise.com">
-                        MOBIRISE
-                    </a>
-                </span>
-            </div>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-                        Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="https://mobirise.com">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                        About Us
-                    </a>
-                </li>
-            </ul>
-            <div class="navbar-buttons mbr-section-btn">
-                <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">
-                    <span class="mbri-save mbr-iconfont mbr-iconfont-btn "></span>
-                    Try It Now!
-                </a>
-            </div>
-        </div>
-    </nav>
-</section>
-
-<section class="engine"><a href="https://mobirise.ws/h">make free website</a></section><section class="cid-qQQy59MJ27" id="image2-1">
-
-    
 
     <figure class="mbr-figure">
         <div class="image-block" style="width: 100%;">
-            <img src="assets/images/mbr-1634x1080.jpg" alt="Mobirise" title="">
+            <img src="assets5/images/mbr-1634x1080.jpg" alt="Mobirise" title="">
             <figcaption class="mbr-figure-caption mbr-figure-caption-over">
                 <div class="container pb-5 mbr-white align-center mbr-fonts-style display-1"></div>
             </figcaption>
@@ -97,13 +29,14 @@
         <div class="media-container-row">
             <div class="col-12 col-md-8">
                 <div class="media-container-row">
-                    <div class="mbr-figure" style="width: 60%;">
-                      <img src="assets/images/mbr-436x245.jpg" alt="Mobirise" title="">  
+                    <div class="mbr-figure" style="width: 125%;">
+                      <img src="assets5/images/mbr-436x245.jpg" alt="Mobirise" title="">  
                     </div>
                     <div class="media-content">
                         <div class="mbr-section-text">
                             <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                               <strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website development tools available today.
+                               <strong style="font-family: arial">Ý nghĩa của Cafe với cuộc sống</strong> <br>
+                               Nếu đã gọi là trải nghiệm với đời thì những gì là cay – đắng – ngọt – bùi bao giờ cũng là biến cố. Mỗi hương vị ấy đều có cảm nhận khác nhau theo từng cung bậc của nốt nhạc thăng trầm mà được trổi dậy bởi sự tác động của chủ nhân. Xin Bạn một lần thưởng thức ly cafe không đường để biết được nó hoàn toàn không bao giờ đắng…
                             </p>
                         </div>
                     </div>
@@ -120,104 +53,26 @@
     <div class="container">
         <div class="media-container-row">
             <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
-                <strong> Make your own website in a few clicks!</strong> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website development tools <a href="https://mobirise.com/">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
+                <p>Cái cảm giác ngồi quán cóc lề đường uống café sẽ khác với cảm giác khi bạn ngồi trong quán, cái cảm giác ngồi uống một mình cũng sẽ khác khi ngồi với bạn. Ngồi một mình, bạn đang có một sự băng khoăng khó tả, một điều gì đó khiến bạn cần cái không gian tỉnh lặng để lắng lòng lại và suy nghĩ. Riêng ngồi với bạn bè, hạnh phúc nào hơn thế! Buổi sáng ta uống ly cafe cho tinh thần sảng khoái để bắt đầu một ngày mới tất bật với cuộc sống mưu sinh đời thường. </p>
+                <p>Buổi sáng ngồi uống cafe hình thành cho ta thói quen dậy sớm để thưởng thức khí trời mát dịu của màn sương đêm còn đọng lại. Buổi sáng ngồi nhâm nhi ly cafe trên tay cầm tờ báo như dân trí thức sành thông tin để giao đôi hữu nghị. Buổi sáng uống cafe và hút một điếu thuốc sặc mùi làm lòng ta ấm lại. Buổi sáng cafe như mọi ngày, thiếu một ngày đời ta như hụt hẫng ! Buổi trưa uống cafe để tinh thần thư giãn để bắt đầu buổi chiều đầy “manh động”.</p>
+                <p>Buổi trưa uống cafe nhưng thật ra ít uống cafe, chỉ là thói quen để nghỉ trưa mà thôi. Buổi trưa uống cafe ngồi một mình hay với bạn chỉ là như nhau ! Buổi chiều ít ai uống cafe vì tinh thần ta đang xuống. Buổi chiều không bao giờ uống cafe để ta về với gia đình, về với mái nhà thân yêu của ta để rũ bỏ sạch mọi ưu phiền của tạo hóa. Buổi tối uống cafe chỉ thường dành cho ai chưa có gia đình hay đời còn hưng phấn. Buổi tối uống cafe để chuyện trò của ngày hôm đó. Buổi tối uống cafe vì thời gian đó người ta mới rảnh rỗi. Buổi tối uống cafe nhưng thật tình ít ai uống cafe.</p>
+                <p>Buổi tối không uống cafe vì bạn cần yên giấc để ngày mai bắt đầu. Buổi tối chỉ giải khát để cho nhẹ trong lòng. Buổi tối cafe ít uống một mình vì ta cần bạn bè. Buổi tối cafe chỉ dành cho những ai đang cô đơn ! Dù cho bạn uống cafe vào thời điểm nào đi chăng nữa thì cũng chỉ sẽ chọn loại cafe quen thuộc mà mình ưa thích. Ly cafe đen đá, ly cafe sữa đá hay còn gọi là cafe nâu, ly bac sỉu thơm nồng mùi sữa đặc sẽ dậy lên niềm phấn khỏi. Nhưng, có bao giờ chủ động hay vô tình uống một ly cafe không đường thì bạn sẽ cảm nhận nó như thế nào?. Ban đầu nó đắng rất khó uống nhưng nó sẽ ngọt khi tan trong bạn.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="mbr-section article content1 cid-qQQzlBPnUM" id="content1-5">
-    
-     
-
-    <div class="container">
-        <div class="media-container-row">
-            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
-                <strong> Make your own website in a few clicks!</strong> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <em>mobile friendly websites</em> in a few clicks. Mobirise is one of the easiest website development tools <a href="https://mobirise.com/">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
-            </div>
-        </div>
-    </div>
-</section>
-
-<section once="" class="cid-qQQzqYgbx8" id="footer7-6">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="row row-links">
-                <ul class="foot-menu">
-                    
-                    
-                    
-                    
-                    
-                <li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">About us</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Services</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Get In Touch</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Careers</a>
-                    </li><li class="foot-menu-item mbr-fonts-style display-7">
-                        <a class="text-white mbr-bold" href="#" target="_blank">Work</a>
-                    </li></ul>
-            </div>
-            <div class="row social-row">
-                <div class="social-list align-right pb-2">
-                    
-                    
-                    
-                    
-                    
-                    
-                <div class="soc-item">
-                        <a href="https://twitter.com/mobirise" target="_blank">
-                            <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div class="soc-item">
-                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
-                            <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div class="soc-item">
-                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
-                            <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div class="soc-item">
-                        <a href="https://instagram.com/mobirise" target="_blank">
-                            <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div class="soc-item">
-                        <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
-                            <span class="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div><div class="soc-item">
-                        <a href="https://www.behance.net/Mobirise" target="_blank">
-                            <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
-                        </a>
-                    </div></div>
-            </div>
-            <div class="row row-copirayt">
-                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
-                    © Copyright 2017 Mobirise - All Rights Reserved
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
+      <!-- #include virtual ="/Control/Footer.asp" -->
 
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/dropdown/js/script.min.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
+  <script src="assets5/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets5/popper/popper.min.js"></script>
+  <script src="assets5/tether/tether.min.js"></script>
+  <script src="assets5/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets5/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets5/dropdown/js/script.min.js"></script>
+  <script src="assets5/touchswipe/jquery.touch-swipe.min.js"></script>
+  <script src="assets5/theme/js/script.js"></script>
   
   
 </body>

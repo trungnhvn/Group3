@@ -1,7 +1,7 @@
 <%
    page = "news"
    title = "Tin Tức"
-%>
+   %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/news.asp" -->
 
@@ -11,7 +11,7 @@
       <!-- #include virtual ="/Control/Head.asp" -->
    </head>
    <body>
-     <!-- #include virtual ="/Control/Menu.asp" -->
+      <!-- #include virtual ="/Control/Menu.asp" -->
       <section class="image1 cid-qPh08WzYmX" id="image2-1">
          <div>
             <div class="image-block">
@@ -35,7 +35,7 @@
                      Một tách cà phê đậm đà của THE coffee khởi nguồn từ những vườn cà phê trĩu hạt. Sau mỗi vụ thu hoạch, từng hạt cà phê được chúng tôi chọn lựa kỹ càng bằng “tay”. Đội ngũ công nhân của chúng tôi có trách nhiệm đảm bảo chỉ những hạt cà phê nguyên liệu tốt nhất. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="news_details.asp">READ MORE</a>
                   </div>
                </div>
             </div>
@@ -57,7 +57,7 @@
                      Hãy bảo đảm cà phê bạn uống luôn luôn tươi mới. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="news_details.asp">READ MORE</a>
                   </div>
                </div>
             </div>
@@ -81,12 +81,13 @@
                      Đừng hâm lại quá khứ. Quá khứ là chuyện đã rồi, chứ không phải là một lời bào chữa. Hãy để những chuyện quá khứ thuộc về quá khứ. 
                   </p>
                   <div class="mbr-section-btn align-left">
-                     <a class="btn btn-sm btn-primary display-4" href="#">READ MORE</a>
+                     <a class="btn btn-sm btn-primary display-4" href="news_details.asp">READ MORE</a>
                   </div>
                </div>
             </div>
          </div>
       </section>
-<!-- #include virtual ="/Control/Footer.asp" -->
+
+      <!-- #include virtual ="/Control/Footer.asp" -->
    </body>
 </html>
