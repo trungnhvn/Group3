@@ -4,16 +4,7 @@
    %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/product.asp" -->
-<%
-   limit = 20
-   count = GetCountProduct()
-   
-   maxpage = cint(GetMaxPage(count,limit))
-   IF cint(pagenum) > maxpage THEN
-       pagenum = maxpage
-   END IF
-   
-   %>
+
 <!DOCTYPE html>
 <html >
    <head>
@@ -49,7 +40,7 @@
                         </p>
                      </div>
                      <div class="mbr-section-btn text-center">
-                        <a href="product_details.asp" class="btn btn-primary display-4">
+                        <a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
                         ĐẶT HÀNG
                         </a>
                      </div>
@@ -70,7 +61,7 @@
                         </p>
                      </div>
                      <div class="mbr-section-btn text-center">
-                        <a href="product_details.asp" class="btn btn-primary display-4">
+                        <a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
                         ĐẶT HÀNG
                         </a>
                      </div>
@@ -90,18 +81,13 @@
                            Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa và 1/3 bọt sữa.
                         </p>
                      </div>
-                     <div class="mbr-section-btn text-center"><a href="product_details.asp" class="btn btn-primary display-4">
+                     <div class="mbr-section-btn text-center"><a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
                         ĐẶT HÀNG
                         </a>
                      </div>
                   </div>
                </div>
-               <%  
-                  Table.movenext
-                  loop
-                  Table.close()
-                  set Table = nothing
-                  %>
+
             </div>
          </div>
       </section>

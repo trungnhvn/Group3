@@ -55,7 +55,7 @@
                 <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:EjlOZ3V54buFbiBUaOG7iyBNaW5oIEtoYWksIFRwLiBWaW5oLCBOZ2jhu4cgQW4sIFZp4buHdCBOYW0iSCpGChQKEgkpVhZ9cM45MRGy01Hs0W2huhIUChIJrR1aC2TOOTERobprhZBoJvgaGAoKDfXPIAsVZqL8PhIKDUYKIgsVlBb-Pg" allowfullscreen=""></iframe></div>
             </div>
             <div class="col-md-6">
-                <h2 class="pb-3 align-left mbr-fonts-style display-2">Liên lạc với chúng tôi</h2>
+                <h2 class="pb-3 align-left mbr-fonts-style display-2" style="font-family: arial">Liên lạc với chúng tôi</h2>
                 <div>
                     <div class="icon-block pb-3">
                         
