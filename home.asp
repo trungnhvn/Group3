@@ -7,9 +7,9 @@
 
 
 <!DOCTYPE html>
-<html >
+<html lang="vn">
    <head>
-<!-- #include virtual ="/Control/Head.asp" -->
+		<!-- #include virtual ="/Control/Head.asp" -->
    </head>
    <body>
       <!-- #include virtual ="/Control/Menu.asp" -->

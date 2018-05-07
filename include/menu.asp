@@ -6,14 +6,14 @@
 <%
 	Function GetAllMenu()
 		Dim sql
-		sql = "SELECT * FROM [dbo].[tblMenu] ORDER BY [ShotOder] DESC"
+		sql = "SELECT * FROM [dbo].[tblMenu] ORDER BY [ShotOder] ASC"
 		
 		SET GetAllMenu = SqlQuery(sql)
 	End Function 
 	
 	Function GetListRootMenu()
 		Dim sql
-		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Paren = 0 OR Menu_Paren IS NULL ORDER BY [ShotOder] DESC"
+		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Paren = 0 OR Menu_Paren IS NULL ORDER BY [ShotOder] ASC"
 		
 		SET GetListRootMenu = SqlQuery(sql)
 	End Function
@@ -22,7 +22,7 @@
 		Dim sql
 		paren = cint(paren)
 		
-		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Paren = "& paren &" ORDER BY [ShotOder] DESC"
+		sql = "SELECT * FROM [dbo].[tblMenu] WHERE Menu_Paren = "& paren &" ORDER BY [ShotOder] ASC"
 		
 		SET GetListSubMenu = SqlQuery(sql)
 	End Function 
@@ -36,6 +36,16 @@
 	
 	Function CreateMenu(name,paren,itype,link,shotoder)
 		Dim sql
+		
+		IF paren = "" THEN
+			paren = 0
+		END IF
+		IF itype = "" THEN
+			itype = 0
+		END IF
+		IF shotoder = "" THEN
+			shotoder = 0
+		END IF
 		
 		paren = cint(paren)
 		shotoder = cint(shotoder)
@@ -52,6 +62,15 @@
 	
 	Function UpdateMenu(id,name,paren,itype,link,shotoder)
 		Dim sql 
+		IF paren = "" THEN
+			paren = 0
+		END IF
+		IF itype = "" THEN
+			itype = 0
+		END IF
+		IF shotoder = "" THEN
+			shotoder = 0
+		END IF
 		
 		id = cint(id)
 		paren = cint(paren)

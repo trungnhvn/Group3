@@ -15,27 +15,28 @@
                   <img src="assets/images/mbr-758x531.jpg" title="" style="height: 3.8rem;">
                   </a>
                   </span>
-                  <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="home.asp">THE coffee</a></span>
+                  <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" href="home.asp"><%= GetSetting("Name") %></a></span>
                </div>
             </div>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                  <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="home.asp" aria-expanded="false">Home</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="news.asp" aria-expanded="false">News</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="product.asp" aria-expanded="false">
-                     Product</a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link link text-white display-4" href="contact.asp">
-                     Contact</a>
-                  </li>
+					<%
+						Set Table = GetListRootMenu()
+						
+						Do While NOT Table.Eof
+					%>
+					<li class="nav-item">
+						<a class="nav-link link text-white display-4" href="<%= GetMenuLink(Table("Menu_Type"),Table("Menu_Link")) %>" aria-expanded="false"><%= Table("Menu_Name") %></a>
+					</li>
+					<%	
+						Table.movenext
+						loop
+						Table.close()
+						set Table = nothing
+					%>
                </ul>
             </div>
          </nav>
       </section>
-      
+      <section style="width:100%;height:64px;">
+	  </section>

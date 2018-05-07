@@ -31,7 +31,7 @@
 		
 		
 %>
-<div style="width:100%;text-align: right;display:table">
+<div style="width:100%;text-align: center;display:table">
 	<ul class="pagination">
 		<%
 			IF pagenum > 1 THEN

@@ -9,7 +9,7 @@
 		name=Trim(request.form("Name"))
 		Phone=Trim(request.form("Phone"))
 		Email=Trim(request.form("Email"))
-		Adrren=Trim(request.form("Adrren"))
+		Adrren=Trim(request.form("Addren"))
 		
 		SetSetting "Name",name
 		SetSetting "Phone",Phone
@@ -19,7 +19,7 @@
 		name = GetSetting("Name")
 		Phone =GetSetting ("Phone")
 		Email=GetSetting ("Email")
-		Adrren=GetSetting ("Adrren")
+		Adrren=GetSetting ("Addren")
 	END IF
 %>
 <!DOCTYPE html>

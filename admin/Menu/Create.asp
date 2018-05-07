@@ -92,7 +92,7 @@
 								
 								<div class="form-group <%= SelectHidden("0",iType) %>" id="linkgroup" >
 									<label for="Link">Link</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="Link" name="Link" type="text" value="<%= Link %>">
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" id="Link" name="Link" type="text" value="<%= Link %>">
 									<span class="field-validation-valid" data-valmsg-for="Link" data-valmsg-replace="true"></span>
 								</div>
 								
@@ -110,7 +110,7 @@
 								
 								<div class="form-group">
 									<label for="ShotOder">Thứ tự xắp xếp</label>
-									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="500" data-val-required="Không được để trống tên tài khoản." id="ShotOder" name="ShotOder" type="text" value="<%= ShotOder %>">
+									<input class="form-control" data-val="true" data-val-length="Quá giới hạn ký tự cho phép." data-val-length-max="10" id="ShotOder" name="ShotOder" type="text" value="<%= ShotOder %>">
 									<span class="field-validation-valid" data-valmsg-for="ShotOder" data-valmsg-replace="true"></span>
 								</div>
 								

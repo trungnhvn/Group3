@@ -49,7 +49,7 @@
 													<td><%= GetMenuLink(Table("Menu_Type"),Table("Menu_Link")) %></td>
 													<td><%= GetNameTypeMenu(Table("Menu_Type")) %></td>
 													<td>
-														<a href="/Admin/Menu/Del.asp?Id=<%= Table("Menu_Id") %>" class="btn-mvc">
+														<a href="/Admin/Menu/Del.asp?Id=<%= Table("Menu_Id") %>&p=list" class="btn-mvc">
 															<span class="glyphicon glyphicon-remove"></span>
 														</a>
 													</td>

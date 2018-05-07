@@ -7,6 +7,12 @@
 <!-- #include virtual ="/include/Menu.asp" -->
 <%
 	id = request.querystring("Id")
+	p = request.querystring("p")
+	rd = "/Admin/Menu.asp"
+	IF StrComp(p,"list") = 0 THEN 
+		rd = "/Admin/Menu/List.asp"
+	END IF
+	
 	IF id <> "" THEN
 		Set product = GetMenu(id)
 		IF NOT product.EOF THEN
@@ -17,13 +23,13 @@
 				
 				DeleteMenu id
 				
-				response.redirect "/Admin/Menu.asp"
+				response.redirect rd
 			END IF
 		ELSE
-			response.redirect "/Admin/Menu.asp"
+			response.redirect rd
 		END IF
 	ELSE
-		response.redirect "/Admin/Menu.asp"
+		response.redirect rd
 	END IF
 
 %>

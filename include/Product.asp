@@ -41,13 +41,18 @@
 	
 	Function CreateProduct(name,paren,img,price,component,des,content)
 		Dim sql 
+		
+		IF paren = "" THEN 
+			paren = 0
+		END IF
+		
 		name = ValueEncode(name)
 		component = ValueEncode(component)
 		content = ValueEncode(content)
 		des = ValueEncode(des)
 		img = ValueEncode(img)
 		paren = cint(paren)
-		price = cint(price)
+		price = ValueEncode(price)
 		
 		sql = "INSERT INTO [dbo].[tblProduct](Product_Name,Product_Description,Product_Component,Product_Content,Product_Image,Product_Price,Cat_Id,User_Acount,Product_Status,Product_EditDate,Product_Date)" & _
 			  " VALUES(N'"& name &"',N'"& des &"',N'"& component &"',N'"& content &"',N'"& img &"',N'"& price &"',"& paren &",N'"& User_Acount &"',0,GETDATE(),GETDATE())"
@@ -58,6 +63,10 @@
 	Function UpdateProduct(Id,name,paren,img,price,component,des,content)
 		Dim sql 
 		
+		IF paren = "" THEN 
+			paren = 0
+		END IF
+		
 		name = ValueEncode(name)
 		component = ValueEncode(component)
 		content = ValueEncode(content)
@@ -65,9 +74,9 @@
 		img = ValueEncode(img)
 		paren = cint(paren)
 		Id = cint(Id)
-		price = cint(price)
+		price = ValueEncode(price)
 		
-		sql = "UPDATE [dbo].[tblNews] SET Product_Name = N'"& name &"',Product_Description = N'"& des &"',Product_Component = N'"& component &"',Product_Content = N'"& content &"',Product_Image = N'"& img &"',Product_Price = N'"& price &"',Cat_Id = "& paren &",Product_EditBy = N'"& User_Acount &"',Product_Status = 0,Product_EditDate = GETDATE() WHERE News_Id = " & Id
+		sql = "UPDATE [dbo].[tblProduct] SET Product_Name = N'"& name &"',Product_Description = N'"& des &"',Product_Component = N'"& component &"',Product_Content = N'"& content &"',Product_Image = N'"& img &"',Product_Price = N'"& price &"',Cat_Id = "& paren &",Product_EditBy = N'"& User_Acount &"',Product_Status = 0,Product_EditDate = GETDATE() WHERE Product_Id = " & Id
 		
 		SqlQuery(sql)
 	End Function 

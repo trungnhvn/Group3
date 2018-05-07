@@ -4,7 +4,16 @@
    %>
 <!-- #include virtual ="/include/main.asp" -->
 <!-- #include virtual ="/include/product.asp" -->
-
+<%
+	limit = 9
+	count = GetCountProduct()
+	
+	maxpage = cint(GetMaxPage(count,limit))
+	IF cint(pagenum) > maxpage THEN
+		pagenum = maxpage
+	END IF
+	
+%>
 <!DOCTYPE html>
 <html >
    <head>
@@ -23,75 +32,47 @@
          </figure>
       </section>
       <section class="features3 cid-qPzTGaZqqD" id="features3-5">
-         <div class="container">
-            <div class="media-container-row">
-               <div class="card p-3 col-12 col-md-6 col-lg-4">
+         <div class="container" >
+            <div class="media-container-row" style="display:table;">
+				<%
+					Set Table = GetListProduct(pagenum,limit)
+												
+					Do While NOT Table.Eof
+				%>
+											
+               <div class="card p-3 col-12 col-md-6 col-lg-4" style="display:table;">
                   <div class="card-wrapper">
                      <div class="card-img">
                         <img src="assets/images/mbr-676x451.jpg" title="">
                      </div>
                      <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                           Coffee Cappuccino
+                        <h4 class="card-title mbr-fonts-style display-7" style="margin:10px;">
+                           <%= Table("Product_Name") %>
                         </h4>
                         <p class="mbr-text mbr-fonts-style display-7">
-                            <span>Giá: 30.000 VNĐ</span> 
-                           Cappuccino là một biến cải của caffe latte (cà phê sữa). Thoạt tiên, cappuccino được pha với sô cô la nóng và đặc cùng kem tươi. Sau 1820, bột sô cô la được sáng chế nên được thêm vào dưới dạng những mảnh nhỏ trên kem tươi. Ba thể loại cà phê, sô cô la nóng, và bọt kem tươi tạo ra màu áo nâu của dòng tu phanxicô với những mảnh sô cô la phủ trên kem tươi thành hình chóp&nbsp;
+                            <span>Giá: <%= Table("Product_Price") %></span><br/>
+							Thành phần: <%= Table("Product_Component") %>
                         </p>
                      </div>
                      <div class="mbr-section-btn text-center">
-                        <a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
-                        ĐẶT HÀNG
+                        <a href="product_details.asp?id=<%= Table("Product_Id") %>" class="btn btn-primary display-4" style="font-family: arial">
+							Chi tiết
                         </a>
                      </div>
                   </div>
                </div>
-               <div class="card p-3 col-12 col-md-6 col-lg-4">
-                  <div class="card-wrapper">
-                     <div class="card-img">
-                        <img src="assets/images/mbr-1-676x451.jpg" title="">
-                     </div>
-                     <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                           Coffee Espresso
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            <span>Giá: 40.000 VNĐ</span> 
-                           Espresso nghĩa đen là “ép”. Phương pháp pha chế này dùng nước nóng và hơi ép qua cà phê đã rang và nghiền sẵn với áp suất lớn (lý tưởng là 9-10 atmosphere) khiến cà phê đậm đặc gấp 1-15 lần lượng cà phê so với nước so với các phương pháp thông thường. Một cốc cà phê espresso là thứ nước cốt đen và đậm đặc với nồng độ rất cao nên dung tích cũng hạn chế khoảng ít hơn 20 ml.&nbsp;
-                        </p>
-                     </div>
-                     <div class="mbr-section-btn text-center">
-                        <a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
-                        ĐẶT HÀNG
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="card p-3 col-12 col-md-6 col-lg-4">
-                  <div class="card-wrapper">
-                     <div class="card-img">
-                        <img src="assets/images/mbr-2-676x451.jpg"  title="">
-                     </div>
-                     <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">
-                           Coffee Latte
-                        </h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                            <span>Giá: 35.000 VNĐ</span> 
-                           Coffee latte thực chất được làm chính từ espresso và sữa. Nếu người “thưởng thức” không thật sành sẽ rất hay nhầm lẫn vị của Latte với Cappuccino bởi cả hai đều có 3 thành phần cơ bản: coffee, espresso, sữa nóng và bọt sữa. Tuy nhiên ở Cappuccino người ta cho lượng sữa nóng có thể tương đương so với bọt sữa còn ở Cafe Latte lại chứa 1/3 espresso, 1/3 sữa và 1/3 bọt sữa.
-                        </p>
-                     </div>
-                     <div class="mbr-section-btn text-center"><a href="product_details.asp" class="btn btn-primary display-4" style="font-family: arial">
-                        ĐẶT HÀNG
-                        </a>
-                     </div>
-                  </div>
-               </div>
-
+				<%	
+					Table.movenext
+					loop
+					Table.close()
+					set Table = nothing
+				%>
+               
             </div>
          </div>
       </section>
-      
+      <!-- #include virtual ="/control/paging.asp" -->
+	  
       <!-- #include virtual ="/Control/Footer.asp" -->  
    </body>
 </html>
