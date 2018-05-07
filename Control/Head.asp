@@ -32,7 +32,7 @@
 	  <!-- script -->
       <script async  src="/js/cdn.ampproject.org/v0.js"></script>
       <script async custom-element="amp-analytics" src="/js/cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-      <script async custom-element="amp-sidebar" src="/js/cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+      <script async custom-element="amp-sidebar" src="/js/cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script> <!---->
       <script src="/assets/smoothscroll/smooth-scroll.js"></script>
       
    </head>

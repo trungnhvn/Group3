@@ -3,7 +3,7 @@
    title = "Liên hệ"
 %>
 <!-- #include virtual ="/include/main.asp" -->
-<!-- #include virtual ="/include/news.asp" -->
+<!-- #include virtual ="/include/contact.asp" -->
 <%
 
 	IF Request.ServerVariables("REQUEST_METHOD")= "POST" THEN
@@ -16,7 +16,8 @@
 			errortxt = "Tên danh mục không được để trống!"
 		ELSE
 			CreateContact name,phone,email,content
-					
+			
+			response.redirect "/Home.asp"
 		END IF
 	END IF
 %>
@@ -77,7 +78,7 @@
                     <div data-form-alert="" hidden="">
                         Thanks for filling out the form!
                     </div>
-                    <form class="block mbr-form" action="/Contact.asp" method="POST" data-form-title="Mobirise Form">
+                    <form action="/Contact.asp" method="POST" >
                         <div class="row">
                             <div class="col-md-6 multi-horizontal" data-for="name">
                                 <input type="text" class="form-control input" name="Name" data-form-field="Name" placeholder="Họ tên" required="" id="name-form4-5">
