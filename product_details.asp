@@ -4,9 +4,31 @@
    title = "Chi tiết SP"
 %>
 <!-- #include virtual ="/include/main.asp" -->
-<!-- #include virtual ="/include/news.asp" -->
-
-
+<!-- #include virtual ="/include/product.asp" -->
+<%
+	id = request.querystring("Id")
+	IF id <> "" THEN
+		Set product = GetProduct(id)
+		IF NOT product.EOF THEN
+			
+			name=product("Product_Name")
+			paren=product("Cat_Id")
+			Price=product("Product_Price")
+			Component=product("Product_Component")
+			Description=product("Product_Description")
+			Content=product("Product_Content")
+			Image=product("Product_Image")
+			
+			title = name 
+		ELSE
+			response.redirect "/Product.asp"
+		END IF
+	ELSE
+		response.redirect "/Product.asp"
+	END IF
+	
+	
+%>
 <!DOCTYPE html>
 <html >
 <head>
@@ -17,7 +39,7 @@
 
     <figure class="mbr-figure">
         <div class="image-block" style="width: 100%;">
-            <img src="assets3/images/mbr-1620x1080.jpg"  title="">
+            <img src="/images/images/mbr-1620x1080.jpg"  title="">
             
         </div>
     </figure>
@@ -30,11 +52,11 @@
             <div class="col-12 col-md-8">
                 <div class="media-container-row">
                     <div class="mbr-figure" style="width: 50%;">
-                      <img src="assets3/images/mbr-436x654.jpg"  title="">  
+                      <img src="<%= Image %>"  title="">  
                     </div>
                     <div class="media-content">
                         <div class="mbr-section-text">
-                            <p class="mbr-text mb-0 mbr-fonts-style display-7"><strong>Coffee Capuchino</strong><br>Giá: 30.000 VNĐ<br>Thành phần: Sữa, đường, cafe</p>
+                            <p class="mbr-text mb-0 mbr-fonts-style display-7"><strong><%= name %></strong><br>Giá: <%= Price %><br />Thành phần: <%= Component %></p>
                         </div>
                     </div>
                 </div>
@@ -47,7 +69,7 @@
  
     <div class="container">
         <div class="media-container-row">
-            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-4" style="font-family: arial">Cappuccino là một biến cải của caffe latte (cà phê sữa). Thoạt tiên, cappuccino được pha với sô cô la nóng và đặc cùng kem tươi. Sau 1820, bột sô cô la được sáng chế nên được thêm vào dưới dạng những mảnh nhỏ trên kem tươi. Ba thể loại cà phê, sô cô la nóng, và bọt kem tươi tạo ra màu áo nâu của dòng tu phanxicô với những mảnh sô cô la phủ trên kem tươi thành hình chóp</div>
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-4" style="font-family: arial"><b><%= Description %></b><%= Content %></div>
         </div>
     </div>
 </section>
