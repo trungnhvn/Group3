@@ -78,7 +78,7 @@
                     <div data-form-alert="" hidden="">
                         Thanks for filling out the form!
                     </div>
-                    <form action="/Contact.asp" method="POST" >
+                    <form class="block mbr-form" action="/Contact.asp" action-xhr="/Contact.asp" method="POST" data-form-title="Mobirise Form" i-amphtml-error="error" >
                         <div class="row">
                             <div class="col-md-6 multi-horizontal" data-for="name">
                                 <input type="text" class="form-control input" name="Name" data-form-field="Name" placeholder="Họ tên" required="" id="name-form4-5">

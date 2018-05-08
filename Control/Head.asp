@@ -29,10 +29,6 @@
 	  <!-- google fonts -->
       <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic" rel="stylesheet">
 	  
-	  <!-- script -->
-      <script async  src="/js/cdn.ampproject.org/v0.js"></script>
-      <script async custom-element="amp-analytics" src="/js/cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-      <script async custom-element="amp-sidebar" src="/js/cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script> <!---->
       <script src="/assets/smoothscroll/smooth-scroll.js"></script>
       
    </head>
